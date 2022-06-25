@@ -113,3 +113,11 @@ A heading with a list inside a Quiz section should be converted into a quiz
 * prop d
 :::
 ```
+
+# links
+
+A link becomes by default a button
+
+# Media link
+
+A link to a media (YouTube, Vimeo...) becomes an iframe with embed
