@@ -167,3 +167,11 @@ A link becomes by default a button
 ## Media link
 
 A link to a media (YouTube, Vimeo...) becomes an iframe with embed
+
+# ALTERNATIVES
+Other languages or tools could be used
+* markdown-it converter
+* Hugo 
+* Vuepress / Vitepress
+* python
+* perl parser
