@@ -2,7 +2,7 @@
 
 Project of creating a Lua filter to converts markdown to html Bootstrap components. 
 
-Main target: helping course creation from teachers to Learning Management Software (Moodle's main themes, like "Boost" are Bootstrap based).
+Main target: helping course creation from teachers to Learning Management Software (Moodle's main themes, like "Boost" are Bootstrap based) or web/mobile page.
 
 Hopefully one day included in the https://github.com/pandoc/lua-filters repository.
 
@@ -151,7 +151,7 @@ Quiz questions can be nested into a carousel. A "next" button should be added if
 
 Images references are converted to img or card-img if they are inside a card section.
 
-## links
+## Links
 
 A link becomes by default a button
 
