@@ -1,4 +1,4 @@
-# Pandoc-Lua-Markdown-Bootstrap
+# Pandoc Lua filter : Markdown To Bootstrap
 
 Project of creating a Lua filter to converts markdown to html Bootstrap components. 
 
