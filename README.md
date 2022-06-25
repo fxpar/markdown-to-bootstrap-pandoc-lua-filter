@@ -31,3 +31,20 @@ Some text
 
 ```
 
+# Quiz
+A heading with a list inside a Quiz section should be converted into a quiz
+
+```
+::: quiz
+
+# question 1
+
+* proposition a
+* proposition b
+  * feedback for proposition b
+* proposition c
+* proposition d
+  * feedback for proposition d
+
+:::
+```
