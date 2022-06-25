@@ -15,6 +15,8 @@ Description
 Should be converted into a "jumbotron" (bootstrap 4) or a header (Bootstrap 5).
 
 
+
+
 # Carousel
 A section called carousel with multiple Headers should be converted into a carousel, each header becoming a slide.
 
@@ -30,6 +32,26 @@ Some text
 :::
 
 ```
+
+
+
+# Tabs
+A section called tabs with multiple Headers and text should be converted into tabs, each header becoming a tab header or pill.
+
+```
+::: tabs
+
+# first tab or pill
+Some text
+
+# Second tab or pill
+Some text
+
+:::
+
+```
+
+
 
 # Quiz
 A heading with a list inside a Quiz section should be converted into a quiz
