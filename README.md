@@ -21,14 +21,14 @@ The card section can have a nested header section and or a nested footer section
 ```
 :::card
 
-:::optional card header
+:::header (optional)
 text of the header
 :::
 
 Paragraph one of the body
 Paragraph two of the body
 
-:::optional card footer
+:::footer (optional)
 text of the footer
 :::
 
