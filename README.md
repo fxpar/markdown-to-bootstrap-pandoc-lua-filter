@@ -6,6 +6,8 @@ Main target: helping course creation from teachers to Learning Management Softwa
 
 Hopefully one day included in the https://github.com/pandoc/lua-filters repository.
 
+
+
 # USAGE
 
 ```
@@ -14,10 +16,17 @@ pandoc sample.md --lua-filter bootstrap.lua -o expected.html
 
 Or with a template to add the bootstrap headers and navbar with Table of content.
 
+# COMPONENTS
 
-# Headers
+These are syntax propositions. Ideally, the codes to be added to a raw md document should be minimal to convert it into bootstrap.
 
-A title followed by a paragraph a line and another paragraph should be converted into a "jumbotron" (bootstrap 4) or a header (Bootstrap 5).
+In a perfect solution, only a few sections like :::carousel or :::quiz should be added. The rest of the component should be "deduced" from the structure of the source document.
+
+# Header block (jumbotron)
+
+* **Expected syntax**: 1) A title followed by 2) a paragraph 3) a line and 4) another paragraph 
+* **Should be converted into**: a "jumbotron" (bootstrap 4) or a header (Bootstrap 5)
+
 ```
 # title
 Lead text
@@ -25,9 +34,11 @@ Lead text
 Description
 ```
 
-# COMPONENTS
 
 ## Cards
+
+_For now, a section needs to be added. Hopefully, a more evident syntax could be used to deduce a card structure directly in the source file without any addition._
+
 A section called card with some paragraph are turned into a card. The paragraphs are the card body.
 
 The card section can have a nested header section and or a nested footer section with some paragraphs.
@@ -53,6 +64,8 @@ text of the footer
 
 ## Carousel
 A section called carousel with multiple Headers should be converted into a carousel, each header becoming a slide.
+
+The text can be cards of other component nested.
 
 ```
 ::: carousel
