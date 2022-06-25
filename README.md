@@ -33,6 +33,22 @@ Some text
 
 ```
 
+# Accordion
+A section called accordion with multiple Headers and text should be converted into collapsible accordion, each header becoming the toglle link name.
+
+```
+::: accordion
+
+# first toggle link
+Some text
+
+# Second toggle link
+Some text
+
+:::
+
+```
+
 
 
 # Tabs
