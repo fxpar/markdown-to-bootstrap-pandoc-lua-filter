@@ -119,6 +119,12 @@ Some text
 ## Quiz
 A heading with a list inside a Quiz section should be converted into a quiz
 
+Correct solutions DO have a feedback.
+
+(A former proposition was to have the correct answer start with * or + and the other propositions start with - , but pandoc's abstract tree doesn't keep the symbol used in the list)
+
+Quiz questions can be nested into a carousel. A "next" button should be added if it is the case.
+
 ```
 ::: quiz
 
