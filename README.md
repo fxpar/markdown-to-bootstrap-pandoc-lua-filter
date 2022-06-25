@@ -4,7 +4,7 @@ Project of creating a Lua filter to converts markdown to Bootstrap components.
 
 # Headers
 
-A title followed by a paragraph a line and another paragraph
+A title followed by a paragraph a line and another paragraph should be converted into a "jumbotron" (bootstrap 4) or a header (Bootstrap 5).
 ```
 # title
 Lead text
@@ -12,9 +12,29 @@ Lead text
 Description
 ```
 
-Should be converted into a "jumbotron" (bootstrap 4) or a header (Bootstrap 5).
 
+# Cards
+A section called card with some paragraph are turned into a card. The paragraphs are the card body.
 
+The card section can have a nested header section and or a nested footer section with some paragraphs.
+
+```
+:::card
+
+:::optional card header
+text of the header
+:::
+
+Paragraph one of the body
+Paragraph two of the body
+
+:::optional card footer
+text of the footer
+:::
+
+:::
+
+```
 
 
 # Carousel
