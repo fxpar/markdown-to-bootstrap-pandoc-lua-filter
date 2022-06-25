@@ -1,6 +1,19 @@
-# Pandoc-Lua-Markdown-Bootstrap-
+# Pandoc-Lua-Markdown-Bootstrap
 
-Project of creating a Lua filter to converts markdown to Bootstrap components.
+Project of creating a Lua filter to converts markdown to html Bootstrap components. 
+
+Main target: helping course creation from teachers to Learning Management Software (Moodle's main themes, like "Boost" are Bootstrap based).
+
+Hopefully one day included in the https://github.com/pandoc/lua-filters repository.
+
+# USAGE
+
+```
+pandoc sample.md --lua-filter bootstrap.lua -o expected.html
+```
+
+Or with a template to add the bootstrap headers and navbar with Table of content.
+
 
 # Headers
 
@@ -12,8 +25,9 @@ Lead text
 Description
 ```
 
+# COMPONENTS
 
-# Cards
+## Cards
 A section called card with some paragraph are turned into a card. The paragraphs are the card body.
 
 The card section can have a nested header section and or a nested footer section with some paragraphs.
@@ -37,7 +51,7 @@ text of the footer
 ```
 
 
-# Carousel
+## Carousel
 A section called carousel with multiple Headers should be converted into a carousel, each header becoming a slide.
 
 ```
@@ -53,7 +67,7 @@ Some text
 
 ```
 
-# Accordion
+## Accordion
 A section called accordion with multiple Headers and text should be converted into collapsible accordion, each header becoming the toglle link name.
 
 ```
@@ -71,7 +85,7 @@ Some text
 
 
 
-# Tabs
+## Tabs
 A section called tabs with multiple Headers and text should be converted into tabs, each header becoming a tab header or pill.
 
 ```
@@ -89,7 +103,7 @@ Some text
 
 
 
-# Quiz
+## Quiz
 A heading with a list inside a Quiz section should be converted into a quiz
 
 ```
@@ -114,10 +128,14 @@ A heading with a list inside a Quiz section should be converted into a quiz
 :::
 ```
 
-# links
+## Images
+
+Images references are converted to img or card-img if they are inside a card section.
+
+## links
 
 A link becomes by default a button
 
-# Media link
+## Media link
 
 A link to a media (YouTube, Vimeo...) becomes an iframe with embed
