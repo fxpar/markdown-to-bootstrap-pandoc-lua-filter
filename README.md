@@ -34,6 +34,15 @@ Lead text
 Description
 ```
 
+## Alerts
+* Sections called info, warning, danger... 
+* Should be rendered as alerts
+
+```
+:::danger
+You must do this to be safe
+:::
+```
 
 ## Cards
 
@@ -151,7 +160,7 @@ Quiz questions can be nested into a carousel. A "next" button should be added if
 
 Images references are converted to img or card-img if they are inside a card section.
 
-## Links
+## Buttons
 
 A link becomes by default a button
 
