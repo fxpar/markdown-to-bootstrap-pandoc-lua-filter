@@ -37,7 +37,7 @@ A heading with a list inside a Quiz section should be converted into a quiz
 ```
 ::: quiz
 
-# question 1
+# Question 1
 
 * proposition a
 * proposition b
@@ -45,6 +45,13 @@ A heading with a list inside a Quiz section should be converted into a quiz
 * proposition c
 * proposition d
   * feedback for proposition d
+  
+# Question 2
 
+* prop a
+  * feedback prop a
+* prop b
+* prop c
+* prop d
 :::
 ```
