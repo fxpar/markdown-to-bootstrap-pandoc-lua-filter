@@ -3,9 +3,10 @@
 
 
 
-local normal_filter, special_filter, carousel_filter, tabs_filter, accordion_filter, card_filter, carddeck_filter, alert_filter
+local normal_filter, special_filter, carousel_filter, tabs_filter, accordion_filter, card_filter, carddeck_filter, alert_filter, jumbotron_filter
 local mytoc=''
 local num = 1
+local paranum = 1
 
 
 -- jumbo
@@ -17,16 +18,21 @@ jumbotron_filter = {
 	print(make_id(pandoc.Inlines (pandoc.utils.stringify(el))))
     return el
   end,
-  BulletList = function (el)
-    local mylist ='<ul >\n'
-    for i, item in ipairs(el.content) do
-      local first = item[1]
-      if first  then
-        mylist =  mylist .. '<li class="special-item">' .. pandoc.utils.stringify(first) ..  '</li>\n'
+  Para = function (para) 
+      if paranum == 1  then
+		  paranum = paranum + 1
+        return pandoc.Plain(
+			{pandoc.RawInline('html', '<p class="lead">')} ..
+			para.content ..
+			{pandoc.RawInline('html', '</p>')}
+		)
+	  else
+	    return el
       end
-    end
-    mylist =  mylist .. '</ul>\n'
-    return pandoc.RawInline('html', mylist)
+  end,
+	paranum = 1,
+  HorizontalRule = function (el)
+	return pandoc.RawInline('html', '<hr class="my-4">')
   end
 }
 
@@ -221,6 +227,8 @@ normal_filter = {
 
     if div.classes[1] == 'carousel' then
       filter = carousel_filter
+	elseif div.classes[1] == 'jumbotron' then
+      filter = jumbotron_filter
 	elseif div.classes[1] == 'accordion' then
       filter = accordion_filter
 	elseif div.classes[1] == 'tabs' then

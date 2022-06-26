@@ -1,10 +1,12 @@
 
-
-# Jumbotron
+::: jumbotron
+# Learn Pandoc and Lua
 Lead text for this header block
----
-Description part for this jumbotron
 
+---
+
+Description part for this jumbotron
+:::
 
 
 
