@@ -1,5 +1,7 @@
 # Pandoc Lua filter : Markdown To Bootstrap
 
+DRAFT TOTALLY UNFINISHED
+
 Project of creating a Lua filter to converts markdown to html Bootstrap components. 
 
 Main target: helping course creation from teachers to Learning Management Software (Moodle's main themes, like "Boost" are Bootstrap based) or web/mobile page.
