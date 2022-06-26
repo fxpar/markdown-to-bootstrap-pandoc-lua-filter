@@ -24,8 +24,12 @@ In a perfect solution, only a few sections like :::carousel or :::quiz should be
 
 # Header block (jumbotron)
 
-* **Expected syntax**: 1) A title followed by 2) a paragraph 3) a line and 4) another paragraph 
+* **Expected syntax**: a section called jumbotron
 * **Should be converted into**: a "jumbotron" (bootstrap 4) or a header (Bootstrap 5)
+  * the title
+  * the first paragraph
+  * a horizontal rule
+  * all the other paragraphs or content
 
 ```
 # title

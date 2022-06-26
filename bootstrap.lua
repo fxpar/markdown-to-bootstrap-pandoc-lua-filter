@@ -14,26 +14,24 @@ jumbotron_filter = {
   traverse = 'topdown',
   Header = function(el)
     local mytitle = pandoc.utils.stringify(el)
-    el.classes = {'specialHeader'}
+    el.classes = {'display-4'}
 	print(make_id(pandoc.Inlines (pandoc.utils.stringify(el))))
     return el
   end,
   Para = function (para) 
       if paranum == 1  then
 		  paranum = paranum + 1
+		  
         return pandoc.Plain(
 			{pandoc.RawInline('html', '<p class="lead">')} ..
 			para.content ..
-			{pandoc.RawInline('html', '</p>')}
+			{pandoc.RawInline('html', '</p>\n<hr class="my-4"/>\n')}
 		)
 	  else
-	    return el
+	    return para
       end
-  end,
-	paranum = 1,
-  HorizontalRule = function (el)
-	return pandoc.RawInline('html', '<hr class="my-4">')
   end
+
 }
 
 -- alert
@@ -239,6 +237,7 @@ normal_filter = {
       filter = normal_filter
     end
     return div:walk(filter), false
+    -- return div:walk({filter,{pandoc.RawInline('html', '\n\n')}}, false)
   end
 }
 

@@ -3,8 +3,6 @@
 # Learn Pandoc and Lua
 Lead text for this header block
 
----
-
 Description part for this jumbotron
 :::
 
