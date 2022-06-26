@@ -1,6 +1,3 @@
-expected.html
-tarleb2.lua
-ast.json
 .gitignore
-expectedTarleb2.html
 .git
+archives/**
