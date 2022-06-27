@@ -1,0 +1,19 @@
+<h1 id="jumbotron">Jumbotron</h1>
+<h2 id="lead-text-for-this-header-block">Lead text for this header
+block</h2>
+<p>Description part for this jumbotron</p>
+<h1 id="normal-chapter">normal chapter</h1>
+<ul>
+<li>a normal list</li>
+<li>with items</li>
+<li>or more</li>
+<li>to finish</li>
+</ul>
+<section id="special-chapter" class="Special">
+<h1>special chapter</h1>
+<ul>
+<li>at the start</li>
+<li>something else</li>
+<li>the end</li>
+</ul>
+</section>

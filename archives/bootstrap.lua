@@ -3,7 +3,7 @@
 
 
 
-local normal_filter, special_filter, carousel_filter, tabs_filter, accordion_filter, card_filter, carddeck_filter, alert_filter, jumbotron_filter
+local filter_class, normal_filter, special_filter, carousel_filter, tabs_filter, accordion_filter, card_filter, carddeck_filter, alert_filter, jumbotron_filter
 local mytoc=''
 local num = 1
 local paranum = 1
@@ -25,7 +25,7 @@ jumbotron_filter = {
         return pandoc.Plain(
 			{pandoc.RawInline('html', '<p class="lead">')} ..
 			para.content ..
-			{pandoc.RawInline('html', '</p>\n<hr class="my-4"/>\n')}
+			{pandoc.RawInline('html', '</p>\n<hr class="my-4"/>')}
 		)
 	  else
 	    return para
@@ -37,23 +37,7 @@ jumbotron_filter = {
 -- alert
 alert_filter = {
   traverse = 'topdown',
-  Header = function(el)
-    local mytitle = pandoc.utils.stringify(el)
-    el.classes = {'specialHeader'}
-	print(make_id(pandoc.Inlines (pandoc.utils.stringify(el))))
-    return el
-  end,
-  BulletList = function (el)
-    local mylist ='<ul >\n'
-    for i, item in ipairs(el.content) do
-      local first = item[1]
-      if first  then
-        mylist =  mylist .. '<li class="special-item">' .. pandoc.utils.stringify(first) ..  '</li>\n'
-      end
-    end
-    mylist =  mylist .. '</ul>\n'
-    return pandoc.RawInline('html', mylist)
-  end
+  print("ALERT")
 }
 
 
@@ -221,7 +205,7 @@ normal_filter = {
   end,
 
   Div = function (div)
-    local filter
+    local cl=''
 
     if div.classes[1] == 'carousel' then
       filter = carousel_filter
@@ -232,11 +216,13 @@ normal_filter = {
 	elseif div.classes[1] == 'tabs' then
       filter = tabs_filter
 	elseif div.classes[1] == ('info' or 'danger' or 'warning') then
+	  cl = 'alert alert'..div.classes[1]
       filter = alert_filter
     else
       filter = normal_filter
     end
-    return div:walk(filter), false
+	if cl=='' then cl= div.classes[1] end
+    return {pandoc.RawInline('html', '<div class="'..cl..'">'), div:walk(filter),pandoc.RawInline('html', '</div>')}, false
     -- return div:walk({filter,{pandoc.RawInline('html', '\n\n')}}, false)
   end
 }
