@@ -6,7 +6,7 @@
  <meta name="description" content="François Parlant livre ses 4 ressources les plus utiles pour apprendre PowerBi et pour former ses collègues.">
   <meta name="keywords" content="PowerBi,Données,Apprendre,Se former, Tutoriel">
   <meta name="author" content="François Parlant">
-<meta property="og:image" content="./media/Mes-4-secrets-de-formateur-PowerBi.png"/>
+<meta property="og:image" content=""/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 <link href="../css/sidebar.css" rel="stylesheet">
@@ -109,6 +109,126 @@
   <p>You can find a stub implementation of this via a Pandoc and Lua filter tool.</p>
   <a class="btn btn-light btn-lg" href="cas-projets.xlsx" role="button"><i class="fa fa-download"></i>Check the projet on Github</a>
 </div>
+
+
+
+
+<hr class="my-4">
+<h2 class="display-4" id="sectionQuiz">Quiz</h2>
+<!-- Quiz COMPONENT -->
+
+<div id="carouselTest1" class="carousel slide" data-bs-interval="false" data-bs-ride="false">
+    <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+
+
+
+            <div class="card text-center">
+
+                <div class="card-body">
+                    <h5 class="card-title display-4">2 most frequent questions</h5>
+                    <p class="card-text">Earn points for the exam.</p>
+                    <a class="btn btn-success text-white" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Start!</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="carousel-item">
+
+
+            <div class="card  mt-2" style="">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="">Which bootstrap component can be swyped?</div>
+
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item collapsed" data-bs-toggle="collapse" data-bs-target="#q1a1" aria-expanded="false">Carousel
+                        <div id="q1a1" class="collapsed collapse" style="">
+                            <div class="alert alert-success p-3">Perfect! yes the carousel has controls to swype on mobile and click on desktop.
+                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item ">Accordion</li>
+                    <li class="list-group-item ">Alert</li>
+                    <li class="list-group-item ">Carddeck</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-xs btn-primary text-right pull-right" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Next</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="carousel-item">
+
+
+            <div class="card  mt-2" style="">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="">Which language takes <b>indentation</b> very seriously?</div>
+
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Javascript<br>
+                    </li>
+
+                    <li class="list-group-item">php<br></li>
+                    <li class="list-group-item collapsed" data-bs-toggle="collapse" data-bs-target="#q1a2" aria-expanded="false">Python<br>
+                        <div id="q1a2" class="collapsed collapse" style="">
+                            <div class="alert alert-success" >yes in Python indenting code is very important
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-primary" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Suivant</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+It should simply be created from this code
+
+<pre><code>
+::: quiz carousel
+
+# 2 most frequent questions
+Earn points for the exam
+
+
+# Which bootstrap component can be swyped?
+* Carousel
+  * Perfect! yes the carousel has controls to swype on mobile and click on desktop.
+* Accordion
+* Alert
+* Carddeck
+
+# Which language takes indentation very seriously?
+* javascript
+* Php
+* Python
+  * yes in Python indenting code is very important
+
+
+:::
+</code></pre>
+
+
+
+
 
 <hr class="my-4">
 <h2 class="display-4" id="sectionJumbotron">Jumbotron</h2>
