@@ -9,6 +9,7 @@
 <meta property="og:image" content=""/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<link href="css/sidebar.css" rel="stylesheet">
 <link href="../css/sidebar.css" rel="stylesheet">
 	<style>
 		@media (min-width:1025px) { body { width: 50% !important; margin-left:25vw !important;} }
@@ -17,11 +18,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </head>
-<body class="">
+<body >
 
+<!-- container -->
+<div class="container container-fluid" >
 
-<!-- permet de réduire à 50% sur ordinateur -->
-<div class="container container-fluid pt-5">
 
 
 <nav class="navbar sticky-top navbar-light bg-light">
@@ -74,14 +75,14 @@
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Markdown to Bootstrap</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body ">
+  <div class="offcanvas-body " >
 
 	<ul class="list-unstyled ps-0">
 	<li class="border-top my-3"></li>
 		<li class="mb-1">
 			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#formules-collapse" aria-expanded="true">Content</button>
 			<div id="formules-collapse" class="collapse show" >
-				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" data-bs-dismiss="offcanvas">
 					<li class="mb-1"><a class="link-dark  rounded" href="#sectionIntro">Intro</a></li>
 					<li><a class="link-dark rounded" href="#sectionJumbotron">Jumbotron</a></li>
 					<li><a class="link-dark rounded" href="#sectionAlerts">Alerts</a></li>
@@ -97,9 +98,9 @@
 		<li class="mb-1">
 			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#presentation-collapse" aria-expanded="true">More info</button>
 			<div id="presentation-collapse" class="collapse show" >
-				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" data-bs-dismiss="offcanvas">
 					<li><a class="nav-link link-dark rounded" href="https://fxpar.github.io/Cours/"><i class="bi-mortarboard-fill me-2"></i> Autres cours</a></li>
-					<li><a class="nav-link link-dark rounded" href="https://github.com/fxpar/Cours/"><i class="bi-github me-2"></i>Projet sur Github</a></li>
+					<li><a class="nav-link link-dark rounded" href="https://github.com/fxpar/lua-filters/tree/master/md-to-bootstrap"><i class="bi-github me-2"></i>Projet sur Github</a></li>
 					<li><a class="nav-link link-dark rounded" href="https://www.youtube.com/c/enparlantdebureautiqueformezvous"><i class="bi-youtube me-2"></i>Chaîne YouTube</a></li>
 					
 
@@ -129,8 +130,8 @@
 
 
 
-<hr class="my-4">
-<h2 class="display-4" id="sectionQuiz">Quiz</h2>
+<hr class="my-4" id="sectionQuiz">
+<h2 class="display-4" >Quiz</h2>
 <!-- Quiz COMPONENT -->
 <div>Click start to get to first question<br/>
 Click "Carousel" in first question<br/>
@@ -250,7 +251,7 @@ Earn points for the exam
 
 
 
-<hr class="my-4">
+<hr class="my-4" id="sectionJumbotron">
 <h2 class="display-4" id="sectionJumbotron">Jumbotron</h2>
 <!-- JUMBOTRON COMPONENT -->
 
@@ -272,9 +273,9 @@ It should be created automatically from the markdown code below.
 
 </code></pre>
 
-<hr class="my-4">
+<hr class="my-4" id="sectionAlerts">
 <!-- ALERT Component -->
-<h2 class="display-4" id="sectionAlerts">ALERTS</h2>
+<h2 class="display-4" >ALERTS</h2>
 <div class="alert alert-danger" role="alert" id="alertDanger">
   This is a danger alert
 </div>
@@ -307,9 +308,9 @@ This is an info alert
 </code></pre>
 
 
-<hr class="my-4">
+<hr class="my-4" id="sectionCards">
 <!-- CARDS Component -->
-<h2 class="display-4" id="sectionCards">CARDS</h2>
+<h2 class="display-4" >CARDS</h2>
 <div class="card text-center" id="card">
   <div class="card-header">
     text of the header
@@ -347,9 +348,9 @@ text of the footer
 
 
 
-<hr class="my-4">
+<hr class="my-4" id="sectionCarousel">
 <!-- CAROUSEL Component -->
-<h2 class="display-4" id="sectionCarousel">CAROUSEL</h2>
+<h2 class="display-4" >CAROUSEL</h2>
 
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -412,9 +413,9 @@ Some representative placeholder content for the third slide.
 
 
 
-<hr class="my-4">
+<hr class="my-4" id="sectionAccordion">
 <!-- ACCORDIoN Component -->
-<h2 class="display-4" id="sectionAccordion">ACCORDION</h2>
+<h2 class="display-4" >ACCORDION</h2>
 <div>Click on each drawer title to unfold the level of the accordion.</div>
 
 <div class="accordion" id="accordionExample">
@@ -479,9 +480,9 @@ Third toggle content
 
 
 
-<hr class="my-4">
+<hr class="my-4" id="sectionTabs">
 <!-- TABS Component -->
-<h2 class="display-4" id="sectionTabs">TABS</h2>
+<h2 class="display-4" >TABS</h2>
 <div>Click on each "tab" to see the content of the card change</div>
 <!-- début tabs -->
 
