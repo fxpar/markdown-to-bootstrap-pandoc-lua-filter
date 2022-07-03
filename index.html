@@ -339,7 +339,7 @@ text of the header
 Paragraph one of the body
 Paragraph two of the body
 
-:::footer (optional)
+::: footer (optional)
 text of the footer
 :::
 
@@ -395,7 +395,7 @@ text of the footer
 
 Should be created from
 <pre class="bg-light"><code>
-::: carousel carouselExampleControls
+::: carousel 
 
 # First slide label
 Some representative placeholder content for the first slide.
@@ -462,7 +462,7 @@ Some representative placeholder content for the third slide.
 <div>Should be created from:</div>
 
 <pre class="bg-light"><code>
-::: accordion accordionId
+::: accordion
 
 # Accordion Item #1
 First toggle content
@@ -546,6 +546,64 @@ Do it with Ctrl
 
 
 
+
+<hr class="my-4" id="sectionButtons">
+<!-- Buttons Component -->
+<h2 class="display-4" >Buttons</h2>
+Links are converted to buttons by default
+
+
+<a class="btn btn-primary" href="https://github.com/pandoc">Pandoc repository</a>
+
+<div>Is created from the code</div>
+<pre class="bg-light"><code>
+[Pandoc repository](https://github.com/pandoc)
+</code></pre>
+
+
+<a class="btn btn-success" href="https://github.com/pandoc">Pandoc repository</a>
+
+<div>Is created from the code</div>
+<pre class="bg-light"><code>
+[Pandoc repository](https://github.com/pandoc){.success}
+</code></pre>
+
+
+
+<hr class="my-4" id="sectionEmbeds">
+<!-- Embeds Component -->
+<h2 class="display-4" >Embeds</h2>
+YouTube video are turned into embed
+
+
+[Moodle Bootstrap Design](https://www.youtube.com/watch?v=Uz7XbIxHf-4)
+
+
+
+
+<hr class="my-4" id="sectionIcons">
+<!-- Embeds Component -->
+<h2 class="display-4" >Icons</h2>
+
+<i class="bi bi-bootstrap"></i>
+
+<div>Should be created from:</div>
+
+<pre><code>
+{.bi-bootstrap}
+</code></pre>
+<div>Or even:</div>
+<pre><code>
+(.bi-bootstrap)
+</code></pre>
+
+<div>But currently requires the full syntax to work:</div>
+
+<pre><code>
+
+[]{.bi .bi-bootstrap}
+
+</code></pre>
 
 
 
