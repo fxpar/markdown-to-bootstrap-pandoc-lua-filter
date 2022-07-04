@@ -133,9 +133,7 @@
 <hr class="my-4" id="sectionQuiz">
 <h2 class="display-4" >Quiz</h2>
 <!-- Quiz COMPONENT -->
-<div>Click start to get to first question<br/>
-Click "Carousel" in first question<br/>
-Click "Python" in the second question.
+<div>Click <a class="btn btn-outline-success" role="button" data-bs-target="#carouselTest1" data-bs-slide="next" >start</a> to get to first question.  Click the correct answer to see the feedback : "Carousel" in Q1, "Python" in Q2.
 </div>
 <br/>
 <div id="carouselTest1" class="carousel slide" data-bs-interval="false" data-bs-ride="false">
@@ -328,6 +326,7 @@ This is an info alert
 <div>It should be simply created from this code:</div>
 
 <pre class="bg-light"><code>
+
 ::: card
 
 ::: header (optional)
@@ -344,6 +343,7 @@ text of the footer
 :::
 
 :::
+
 </code></pre>
 
 
@@ -395,6 +395,7 @@ text of the footer
 
 Should be created from
 <pre class="bg-light"><code>
+
 ::: carousel 
 
 # First slide label
@@ -407,6 +408,7 @@ Some representative placeholder content for the second slide.
 Some representative placeholder content for the third slide.
 
 :::
+
 </code></pre>
 
 
@@ -462,6 +464,7 @@ Some representative placeholder content for the third slide.
 <div>Should be created from:</div>
 
 <pre class="bg-light"><code>
+
 ::: accordion
 
 # Accordion Item #1
@@ -526,6 +529,7 @@ Third toggle content
 <div>Should be created from</div>
 
 <pre class="bg-light"><code>
+
 ::: tabs
 
 # Linux
@@ -541,6 +545,7 @@ Do it with Cmd.
 Do it with Ctrl
 
 :::
+
 </code></pre>
 
 
@@ -558,6 +563,7 @@ Links are converted to buttons by default
 <div>Is created from the code</div>
 <pre class="bg-light"><code>
 [Pandoc repository](https://github.com/pandoc)
+
 </code></pre>
 
 
@@ -566,6 +572,7 @@ Links are converted to buttons by default
 <div>Is created from the code</div>
 <pre class="bg-light"><code>
 [Pandoc repository](https://github.com/pandoc){.success}
+
 </code></pre>
 
 
@@ -589,17 +596,17 @@ YouTube video are turned into embed
 
 <div>Should be created from:</div>
 
-<pre><code>
+<pre class="bg-light"><code>
 {.bi-bootstrap}
 </code></pre>
 <div>Or even:</div>
-<pre><code>
+<pre class="bg-light"><code>
 (.bi-bootstrap)
 </code></pre>
 
 <div>But currently requires the full syntax to work:</div>
 
-<pre><code>
+<pre class="bg-light"><code>
 
 []{.bi .bi-bootstrap}
 
