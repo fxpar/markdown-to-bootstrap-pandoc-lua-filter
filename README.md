@@ -2,7 +2,7 @@
 
 **BETA VERSION**
 
-Project of creating a Lua filter to convert markdown to html Bootstrap components like cards, carousel, accordion, tabs, jumbotrons, alerts, buttons, embeds... 
+A Lua filter to convert markdown to Bootstrap components like cards, carousel, accordion, tabs, jumbotrons, alerts, buttons, embeds... 
 
 **Main target**: helping course creation from teachers to Learning Management Software (Moodle's main themes, like "Boost" are Bootstrap based) or web/mobile page.
 
@@ -18,6 +18,9 @@ Here is the list of the components successfully created with this filter
 * [x] Tabs
 * [x] Carousel
 * [x] Buttons
+* [ ] Carddeck
+* [ ] ButtonGroups
+* [ ] Dropdowns
 * [ ] YouTube Embeds
 
 ## Other tools available
