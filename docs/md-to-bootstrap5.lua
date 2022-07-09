@@ -259,15 +259,17 @@ normal_filter = {
   traverse = 'topdown',
   Meta = function(metadata)
   -- Gets the toc and pass it to the template via metadata
-	metadata.toc = pandoc.RawInline('html',mytoc)
+	metadata.toc = pandoc.RawInline('html',"<!-- test -->"..mytoc)
 	if metadata.direction then direction = metadata.direction end
 	return metadata
   end,
   Header = function (el)
 	local mytitle = pandoc.utils.stringify(el)
 	if el.level == 1 then el.classes = {"display-2"} end
+	el.identifier = "title"..num
 	print(make_id(pandoc.Inlines (pandoc.utils.stringify(el))))
-	mytoc = mytoc ..'<li><a href="#title'..num..'">'..el.content[1].text..'</a></li>'
+	-- mytoc = mytoc ..'<li><a href="#title'..num..'">'..el.content[1].text..'</a></li>'
+	addToToc(el)
     return el
   end,
   Link = function(el)
@@ -316,7 +318,9 @@ This where we assign filters.
 }
 
 Pandoc = function (doc)
-  return doc:walk(normal_filter)
+  -- return doc:walk(normal_filter)
+  doc.meta.toc = pandoc.RawInline('html',mytoc)
+  return makeTOC(doc:walk(normal_filter))
 end
 
 
@@ -396,6 +400,19 @@ function sanitize_string(source)
     end)
 end
 
+function addToToc(el)
+	
+	print("TOC: "..pandoc.utils.stringify(el))
+	mytoc = mytoc ..'<li><a href="#title'..num..'">'.. pandoc.utils.stringify(el).."</a></li>"
+	num = num + 1
+	return true
+end
+
+-- we need to modify the doc AT THE END to add the toc
+function makeTOC(doc)
+	doc.meta.toc = pandoc.RawInline('html',"<!-- test 2-->\n"..mytoc)
+	return doc
+end
 
 local function urlencode (str)
    str = string.gsub (str, "([^0-9a-zA-Z !'()*._~-])", -- locale independent

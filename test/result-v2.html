@@ -1,0 +1,265 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="author" content="François Parlant">   
+ <title>Markdown to Bootstrap</title>   
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<link href="css/sidebar.css" rel="stylesheet">
+	<style>
+		@media (min-width:1025px) { body { width: 50% !important; margin-left:25vw !important;} }
+	</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+<body class="">
+
+<!-- permet de réduire à 50% sur ordinateur -->
+<div class="container ">
+
+<div class="collapse" id="navbarToggleoffcanvas">
+  <div class="bg-primary p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar sticky-top navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-dismiss="offcanvas">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel"> <title>Markdown
+to Bootstrap</title>   </h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+	<ul class="list-unstyled ps-0">
+	
+	
+            
+	 
+        
+		 
+          <!-- test 2-->
+<li><a href="#title1">JUMBOTRON</a></li><li><a href="#title2">JUMBOTRON COLORED</a></li><li><a href="#title3">ALERTS</a></li><li><a href="#title4">CARD</a></li><li><a href="#title5">ACCORDION</a></li><li><a href="#title6">CAROUSEL</a></li><li><a href="#title7">TABS</a></li><li><a href="#title8">BUTTONS</a></li><li><a href="#title9">EMBEDS</a></li><li><a href="#title10">Icons</a></li><li><a href="#title11">normal chapter</a></li>   
+		 	</ul>
+   
+		  </div>
+		</div>
+		 <h1 class="title">Markdown to Bootstrap</h1>
+      <h1 class="display-2" id="title1">JUMBOTRON</h1>
+
+      <h1 class="display-4" id="learn-markdown">Learn Markdown</h1>
+      <p class="lead">Lead text for this header block</p>
+      <hr class="my-4"/>
+      <p>Description part for this jumbotron</p>
+
+      <h1 class="display-2" id="title2">JUMBOTRON COLORED</h1>
+
+      <h1 class="display-4" id="learn-boostrap">Learn Boostrap</h1>
+      <p>Lead text for this header block</p>
+      <p>Description part for this jumbotron</p>
+
+      <h1 class="display-2" id="title3">ALERTS</h1>
+      <div class="alert alert-danger">
+      <p>You must do this to be safe</p>
+      </div>
+      <div class="alert alert-info">
+      <p>This is an information</p>
+      </div>
+      <div class="alert alert-warning">
+      <p><span class="bi bi-bug"></span> This is an information</p>
+      </div>
+      <h1 class="display-2" id="title4">CARD</h1>
+      <div class="card">
+      <div class="card-header">
+      <p>text of the header</p>
+      </div>
+      <h1 class="specialHeader" id="a-title-in-the-body">a title in the
+      body</h1>
+      <p>Paragraph one of the body Paragraph two of the body</p>
+      <div class="card-footer">
+      <p>text of the footer</p>
+      </div>
+      </div>
+      <h1 class="display-2" id="title5">ACCORDION</h1>
+      <div class="accordion" id="accordionExample">
+      	
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+              Accordion Item #1      </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+      	
+      		
+      Accordion
+
+      Item
+
+      #1
+
+      <p>First toggle content</p>
+      </div></div></div>	
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+              Accordion Item #2      </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="heading2" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+      	
+      		
+      Accordion
+
+      Item
+
+      #2
+
+      <p>Second toggle content</p>
+      </div></div></div>	
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading3">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+              Accordion Item #3      </button>
+          </h2>
+          <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="heading3" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+      	
+      		
+      Accordion
+
+      Item
+
+      #3
+
+      <p>Third toggle content</p>
+      </div></div></div></div>
+      <h1 class="display-2" id="title6">CAROUSEL</h1>
+      <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+      			<div class="carousel-item active"><h2>
+      		
+      First
+
+      slide
+
+      label
+      </h2>
+      <p>Some representative placeholder content for the first
+      slide.</p>
+      </div>			<div class="carousel-item "><h2>
+      		
+      Second
+
+      slide
+
+      label
+      </h2>
+      <p>Some representative placeholder content for the second
+      slide.</p>
+      </div>			<div class="carousel-item "><h2>
+      		
+      Third
+
+      slide
+
+      label
+      </h2>
+      <p>Some representative placeholder content for the third
+      slide.</p>
+          </div>
+      		  </div>
+      		  <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+      			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      			<span class="visually-hidden">Previous</span>
+      		  </button>
+      		  <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+      			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+      			<span class="visually-hidden">Next</span>
+      		  </button>
+      		</div>
+      <h1 class="display-2" id="title7">TABS</h1>
+      <div class="card-header"><ul class="nav nav-pills card-header-pills" style="list-style-type: none;"><li class="nav-item"><a class="nav-link show active" data-bs-toggle="tab" href="#menu1">Linux</a></li><li class="nav-item"><a class="nav-link " data-bs-toggle="tab" href="#menu2">Mac</a></li><li class="nav-item"><a class="nav-link " data-bs-toggle="tab" href="#menu3">Windows</a></li></ul></div><div class="tab-content border-left border-right border-bottom ">
+      </ul></div> 
+
+      <div class="tab-content border-left border-right border-bottom ">
+      	<div id="menu1" class="tab-pane fade in active show border p-3"><h1>
+      Linux
+      </h1>
+      <h2 id="support-for-linux-users">Support for Linux users</h2>
+      <p>Create a shell script</p>
+      </div><div id="menu2" class="tab-pane fade in border p-3"><h1>
+      Mac
+      </h1>
+      <h2 id="support-for-mac-users">Support for Mac users</h2>
+      <p>Do it with Cmd.</p>
+      </div><div id="menu3" class="tab-pane fade in border p-3"><h1>
+      Windows
+      </h1>
+      <h2 id="support-for-windows-users">Support for windows users</h2>
+      <p>Do it with Ctrl</p>
+      </div></div>
+      <section id="special-chapter" class="specialHeader quiz">
+      <h1 class="specialHeader">special chapter</h1>
+      <ul >
+      <li class="special-item">at the start</li>
+      <li class="special-item">something else</li>
+      <li class="special-item">the end</li>
+      </ul>
+
+      </section>
+      <div class="quiz carousel">
+      <h1 class="specialHeader" id="most-frequent-questions">2 most
+      frequent questions</h1>
+      <p>Earn points for the exam</p>
+      <h1 class="specialHeader"
+      id="which-bootstrap-component-can-be-swyped">Which bootstrap
+      component can be swyped?</h1>
+      <ul >
+      <li class="special-item">Carousel</li>
+      <li class="special-item">Accordion</li>
+      <li class="special-item">Alert</li>
+      <li class="special-item">Carddeck</li>
+      </ul>
+
+      <h1 class="specialHeader"
+      id="which-language-takes-indentation-very-seriously">Which
+      language takes indentation very seriously?</h1>
+      <ul >
+      <li class="special-item">javascript</li>
+      <li class="special-item">Php</li>
+      <li class="special-item">Python</li>
+      </ul>
+
+      </div>
+      <h1 class="display-2" id="title8">BUTTONS</h1>
+      <p><a href="https://github.com/pandoc"
+      class="btn btn-primary">Pandoc repository</a></p>
+      <p><a href="https://github.com/pandoc"
+      class="btn btn-success">Pandoc repository</a></p>
+      <h1 class="display-2" id="title9">EMBEDS</h1>
+      <p><a href="https://www.youtube.com/watch?v=Uz7XbIxHf-4"
+      class="btn btn-primary">Moodle Bootstrap Design</a></p>
+      <h1 class="display-2" id="title10">Icons</h1>
+      <p>I love <span class="bi bi-bootstrap"></span> with markdown.</p>
+      <h1 class="display-2" id="title11">normal chapter</h1>
+      <ul >
+      <li class="list-group-item">a normal list</li>
+      <li class="list-group-item">with items</li>
+      <li class="list-group-item">or more</li>
+      <li class="list-group-item">to finish</li>
+      </ul>
+	  
+      
+   </body>
+</html>
