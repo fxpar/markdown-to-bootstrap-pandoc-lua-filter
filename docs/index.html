@@ -1,187 +1,621 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Greetings, a Lua Filter Template</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="style.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+<meta charset="utf-8">
+<title>Markdown to Bootstrap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="François Parlant livre ses 4 ressources les plus utiles pour apprendre PowerBi et pour former ses collègues.">
+  <meta name="keywords" content="PowerBi,Données,Apprendre,Se former, Tutoriel">
+  <meta name="author" content="François Parlant">
+<meta property="og:image" content=""/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<link href="css/sidebar.css" rel="stylesheet">
+<link href="../css/sidebar.css" rel="stylesheet">
+	<style>
+		@media (min-width:1025px) { body { width: 50% !important; margin-left:25vw !important;} }
+	</style>
+	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Greetings, a Lua Filter Template</h1>
-</header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#checklist">Checklist</a></li>
-<li><a href="#license">License</a></li>
-<li><a href="#Example">Example</a>
-<ul>
-<li><a href="#input.md">input.md</a></li>
-<li><a href="#output.md">output.md</a></li>
-</ul></li>
-<li><a href="#Code">Code</a></li>
-</ul>
+<body >
+
+<!-- container -->
+<div class="container container-fluid" >
+
+
+
+<nav class="navbar sticky-top navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+	<div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-Light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Share
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop1">
+
+
+<li><a class='dropdown-item' href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffxpar.github.io%2FPandoc-Lua-Markdown-Bootstrap%2Findex.html'>
+<i class='bi bi-facebook p-3'></i>Facebook</a>
+</li>
+<li><a class='dropdown-item' href='http://twitter.com/intent/tweet?text=Check%20this%20code%20to%20convert%20Markdown%20into%20beautiful%20bootstrap%20components%20%28carousel%2C%20accordion%2C%20cards%2C%20tabs%E2%80%A6%29&url=https%3A%2F%2Ffxpar.github.io%2FPandoc-Lua-Markdown-Bootstrap%2Findex.html'>
+<i class='bi bi-twitter p-3'></i>Twitter</a>
+</li>
+<li><a class='dropdown-item' href='http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ffxpar.github.io%2FPandoc-Lua-Markdown-Bootstrap%2Findex.html&title=Check%20this%20code%20to%20convert%20Markdown%20into%20beautiful%20bootstrap%20components%20%28carousel%2C%20accordion%2C%20cards%2C%20tabs%E2%80%A6%29'>
+<i class='bi bi-linkedin p-3'></i>Linkedin</a>
+</li>
+<li><a class='dropdown-item' href='https://wa.me/?text=Check%20this%20code%20to%20convert%20Markdown%20into%20beautiful%20bootstrap%20components%20%28carousel%2C%20accordion%2C%20cards%2C%20tabs%E2%80%A6%29%3A%20https%3A%2F%2Ffxpar.github.io%2FPandoc-Lua-Markdown-Bootstrap%2Findex.html'>
+<i class='bi bi-whatsapp p-3'></i>Whatsapp</a>
+</li>
+<li><a class='dropdown-item' href='https://telegram.me/share/url?url=https%3A%2F%2Ffxpar.github.io%2FPandoc-Lua-Markdown-Bootstrap%2Findex.html&text=Check%20this%20code%20to%20convert%20Markdown%20into%20beautiful%20bootstrap%20components%20%28carousel%2C%20accordion%2C%20cards%2C%20tabs%E2%80%A6%29'>
+<i class='bi bi-telegram p-3'></i>Telegram</a>
+</li>
+
+
+
+
+    </ul>
+  </div>
+  
+  </div>
 </nav>
-<p><a
-href="https://github.com/tarleb/lua-filter-template/actions/workflows/ci.yaml"><img
-src="https://img.shields.io/github/workflow/status/tarleb/lua-filter-template/CI?logo=github"
-alt="GitHub build status" /></a></p>
-<p>Greetings is a friendly Lua filter that adds a welcoming message to
-the document.</p>
-<p>This repository serves as a template intended to make publishing of
-pandoc <a href="https://pandoc.org/lua-filters.html">Lua filters</a>
-easy and convenient. Just click “use this template” and then make
-modifications in your new repository. See also the GitHub documentation
-on <a
-href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template">creating
-a repository from a template</a>.</p>
-<h2 id="checklist">Checklist</h2>
-<p>This is just a template, so a few things should be changed to make
-good use of this template. You can use the checklist below to ensure
-that you get the most out of it. We recommend that you perform at least
-the first two steps, everything else is up to you.</p>
-<ol type="1">
-<li><p><input type="checkbox" disabled="" />
-<strong>Rename the filter</strong>: rename the filter
-<code>greetings.lua</code> to your chosen name. It’s often a good idea
-to make the filter name match the repository name: if your repository is
-named <code>lorem</code>, then the filter should be named
-<code>lorem.lua</code>.</p></li>
-<li><p><input type="checkbox" disabled="" />
-<strong>Update the license</strong>: The template is published under the
-MIT, and we recommend to keep the same license for your code. You should
-update the LICENSE file so it has your name.</p></li>
-<li><p><input type="checkbox" disabled="" />
-<strong>Update this README</strong>: describe your filter, so people
-will know what to expect. You may also want to update the URLs above to
-match your repository.</p></li>
-</ol>
-<h2 id="license">License</h2>
-<p>This template repository is published under the MIT license, see file
-<code>LICENSE</code> for details.</p>
-<h2 id="Example">Example</h2>
-<h3 id="input.md">input.md</h3>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode markdown sample"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Lorem ipsum</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Nullus</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>nisl, tincidunt et, mattis eget, convallis nec, purus.</span></code></pre></div>
-<h3 id="output.md">output.md</h3>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode markdown sample"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Nullus</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> Lorem ipsum</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Greetings!</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Hello from the Lua filter!</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>tincidunt et, mattis eget, convallis nec, purus.</span></code></pre></div>
-<h2 id="Code">Code</h2>
-<p><a href="greetings.lua">greetings.lua</a></p>
-<div class="sourceCode" id="greetings.lua"><pre
-class="sourceCode lua"><code class="sourceCode lua"><span id="greetings.lua-1"><a href="#greetings.lua-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- greetings.lua – turns any document into a friendly greeting</span></span>
-<span id="greetings.lua-2"><a href="#greetings.lua-2" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="greetings.lua-3"><a href="#greetings.lua-3" aria-hidden="true" tabindex="-1"></a><span class="co">--- Copyright: © 2021–2022 Contributors</span></span>
-<span id="greetings.lua-4"><a href="#greetings.lua-4" aria-hidden="true" tabindex="-1"></a><span class="co">--- License: MIT – see LICENSE for details</span></span>
-<span id="greetings.lua-5"><a href="#greetings.lua-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="greetings.lua-6"><a href="#greetings.lua-6" aria-hidden="true" tabindex="-1"></a><span class="co">-- Makes sure users know if their pandoc version is too old for this</span></span>
-<span id="greetings.lua-7"><a href="#greetings.lua-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- filter.</span></span>
-<span id="greetings.lua-8"><a href="#greetings.lua-8" aria-hidden="true" tabindex="-1"></a><span class="cn">PANDOC_VERSION</span><span class="op">:</span>must_be_at_least <span class="st">&#39;2.17&#39;</span></span>
-<span id="greetings.lua-9"><a href="#greetings.lua-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="greetings.lua-10"><a href="#greetings.lua-10" aria-hidden="true" tabindex="-1"></a><span class="co">--- Amends the contents of a document with a simple greeting.</span></span>
-<span id="greetings.lua-11"><a href="#greetings.lua-11" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> function say_hello <span class="op">(</span>doc<span class="op">)</span></span>
-<span id="greetings.lua-12"><a href="#greetings.lua-12" aria-hidden="true" tabindex="-1"></a>  doc<span class="op">.</span>meta<span class="op">.</span>subtitle <span class="op">=</span> doc<span class="op">.</span>meta<span class="op">.</span>title            <span class="co">-- demote title to subtitle</span></span>
-<span id="greetings.lua-13"><a href="#greetings.lua-13" aria-hidden="true" tabindex="-1"></a>  doc<span class="op">.</span>meta<span class="op">.</span>title <span class="op">=</span> pandoc<span class="op">.</span>Inlines <span class="st">&#39;Greetings!&#39;</span>  <span class="co">-- set new title</span></span>
-<span id="greetings.lua-14"><a href="#greetings.lua-14" aria-hidden="true" tabindex="-1"></a>  doc<span class="op">.</span>blocks<span class="op">:</span><span class="fu">insert</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> pandoc<span class="op">.</span>Para <span class="st">&#39;Hello from the Lua filter!&#39;</span><span class="op">)</span></span>
-<span id="greetings.lua-15"><a href="#greetings.lua-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> doc</span>
-<span id="greetings.lua-16"><a href="#greetings.lua-16" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
-<span id="greetings.lua-17"><a href="#greetings.lua-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="greetings.lua-18"><a href="#greetings.lua-18" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="op">{</span></span>
-<span id="greetings.lua-19"><a href="#greetings.lua-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Apply the `say_hello` function to the main Pandoc document.</span></span>
-<span id="greetings.lua-20"><a href="#greetings.lua-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span> <span class="cn">P</span>andoc <span class="op">=</span> say_hello <span class="op">}</span></span>
-<span id="greetings.lua-21"><a href="#greetings.lua-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+
+<!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Link with href
+</a>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Button with data-bs-target
+</button> -->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Markdown to Bootstrap</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body " >
+
+	<ul class="list-unstyled ps-0">
+	<li class="border-top my-3"></li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#formules-collapse" aria-expanded="true">Content</button>
+			<div id="formules-collapse" class="collapse show" >
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" data-bs-dismiss="offcanvas">
+					<li class="mb-1"><a class="link-dark  rounded" href="#sectionIntro">Intro</a></li>
+					<li><a class="link-dark rounded" href="#sectionJumbotron">Jumbotron</a></li>
+					<li><a class="link-dark rounded" href="#sectionAlerts">Alerts</a></li>
+					<li><a class="link-dark rounded" href="#sectionCards">Cards</a></li>
+					<li><a class="link-dark rounded" href="#sectionCarousel">Carousel</a></li>
+					<li><a class="link-dark rounded" href="#sectionAccordion">Accordion</a></li>
+					<li><a class="link-dark rounded" href="#sectionTabs">Tabs</a></li>
+					<li><a class="link-dark rounded" href="#sectionQuiz">Quiz</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="border-top my-3"></li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#presentation-collapse" aria-expanded="true">More info</button>
+			<div id="presentation-collapse" class="collapse show" >
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" data-bs-dismiss="offcanvas">
+					<li><a class="nav-link link-dark rounded" href="https://fxpar.github.io/Cours/"><i class="bi-mortarboard-fill me-2"></i> Autres cours</a></li>
+					<li><a class="nav-link link-dark rounded" href="https://github.com/fxpar/lua-filters/tree/master/md-to-bootstrap"><i class="bi-github me-2"></i>Projet sur Github</a></li>
+					<li><a class="nav-link link-dark rounded" href="https://www.youtube.com/c/enparlantdebureautiqueformezvous"><i class="bi-youtube me-2"></i>Chaîne YouTube</a></li>
+					
+
+				</ul>
+			</div>
+		</li>
+		<li class="border-top my-3"></li>
+		<li><a class="nav-link link-dark rounded" href="https://www.linkedin.com/in/francois-parlant/"><i class="bi-linkedin me-2"></i>François Parlant</a></li>
+	</ul>
+   
+  </div>
+</div>
+<!-- fin navbar -->
+
+
+
+
+<!-- INTRO -->
+<div class="text-white p-2 p-md-5 rounded-lg mt-3" style="background:purple" id="sectionIntro">
+  <h1 class="display-4">Markdown to Bootstrap Examples</h1>
+  <p class="lead">Discover how some simple markdown can be converted into beautiful Bootstrap components.</p>
+  <hr class="my-4">
+  <p>You can find a stub implementation of this via a Pandoc and Lua filter tool.</p>
+  <a class="btn btn-light btn-lg" href="https://github.com/fxpar/lua-filters/tree/master/md-to-bootstrap" role="button"><i class="fa fa-download"></i>Check the projet on Github</a>
+</div>
+
+
+
+
+<hr class="my-4" id="sectionQuiz">
+<h2 class="display-4" >Quiz</h2>
+<!-- Quiz COMPONENT -->
+<div>Click <a class="btn btn-outline-success" role="button" data-bs-target="#carouselTest1" data-bs-slide="next" >start</a> to get to first question.  Click the correct answer to see the feedback : "Carousel" in Q1, "Python" in Q2.
+</div>
+<br/>
+<div id="carouselTest1" class="carousel slide" data-bs-interval="false" data-bs-ride="false">
+    <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+
+
+
+            <div class="card text-center">
+
+                <div class="card-body">
+                    <h5 class="card-title display-4">2 most frequent questions</h5>
+                    <p class="card-text">Earn points for the exam.</p>
+                    <a class="btn btn-success text-white" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Start!</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="carousel-item">
+
+
+            <div class="card  mt-2" style="">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="">Which bootstrap component can be swyped?</div>
+
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item collapsed" data-bs-toggle="collapse" data-bs-target="#q1a1" aria-expanded="false">Carousel
+                        <div id="q1a1" class="collapsed collapse" style="">
+                            <div class="alert alert-success p-3">Perfect! yes the carousel has controls to swype on mobile and click on desktop.
+                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item ">Accordion</li>
+                    <li class="list-group-item ">Alert</li>
+                    <li class="list-group-item ">Carddeck</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-xs btn-primary text-right pull-right" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Next</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="carousel-item">
+
+
+            <div class="card  mt-2" style="">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="">Which language takes <b>indentation</b> very seriously?</div>
+
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Javascript<br>
+                    </li>
+
+                    <li class="list-group-item">php<br></li>
+                    <li class="list-group-item collapsed" data-bs-toggle="collapse" data-bs-target="#q1a2" aria-expanded="false">Python<br>
+                        <div id="q1a2" class="collapsed collapse" style="">
+                            <div class="alert alert-success" >yes in Python indenting code is very important
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-primary" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Suivant</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+It should simply be created from this code
+
+<pre class="bg-light"><code>
+::: quiz carousel
+
+# 2 most frequent questions
+Earn points for the exam
+
+
+# Which bootstrap component can be swyped?
+* Carousel
+  * Perfect! yes the carousel has controls to swype on mobile and click on desktop.
+* Accordion
+* Alert
+* Carddeck
+
+# Which language takes indentation very seriously?
+* javascript
+* Php
+* Python
+  * yes in Python indenting code is very important
+
+
+:::
+</code></pre>
+
+
+
+
+
+<hr class="my-4" id="sectionJumbotron">
+<h2 class="display-4" id="sectionJumbotron">Jumbotron</h2>
+<!-- JUMBOTRON COMPONENT -->
+
+<div class="bg-warning p-2 p-md-5 rounded-lg mt-3" >
+  <h1 class="display-4">This is a big header</h1>
+  <p class="lead">This is what a jumbotron (bootrap4) or a header (bs5) looks like.</p>
+  <hr class="my-4">
+  <p>It should be created automatically from the markdown code below.</p>
+  
+</div>
+<div>It should be simply created from this code:</div>
+<pre class="bg-light"><code>
+::: jumbotron
+# This is a big header
+This is what a jumbotron (bootrap4) or a header (bs5) looks like.
+
+It should be created automatically from the markdown code below.
+:::
+
+</code></pre>
+
+<hr class="my-4" id="sectionAlerts">
+<!-- ALERT Component -->
+<h2 class="display-4" >ALERTS</h2>
+<div class="alert alert-danger" role="alert" id="alertDanger">
+  This is a danger alert
+</div>
+
+<div>It should be created from this code:</div>
+
+<pre class="bg-light"><code>
+
+::: danger
+This is a danger alert
+:::
+
+</code></pre>
+
+<hr class="my-4">
+<!-- ALERT Component -->
+
+<div class="alert alert-info" role="alert" id="alertInfo">
+  This is an info alert
+</div>
+
+<div>It should be created from this code:</div>
+
+<pre class="bg-light"><code>
+
+::: info
+This is an info alert
+:::
+
+</code></pre>
+
+
+<hr class="my-4" id="sectionCards">
+<!-- CARDS Component -->
+<h2 class="display-4" >CARDS</h2>
+<div class="card text-center" id="card">
+  <div class="card-header">
+    text of the header
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">a title in the body</h5>
+    <p class="card-text">Paragraph one of the body</p>
+    <p class="card-text">Paragraph two of the body</p>
+  </div>
+  <div class="card-footer text-muted">
+    text of the footer
+  </div>
+</div>
+
+<div>It should be simply created from this code:</div>
+
+<pre class="bg-light"><code>
+
+::: card
+
+::: header (optional)
+text of the header
+:::
+
+# a title in the body
+
+Paragraph one of the body
+Paragraph two of the body
+
+::: footer (optional)
+text of the footer
+:::
+
+:::
+
+</code></pre>
+
+
+
+<hr class="my-4" id="sectionCarousel">
+<!-- CAROUSEL Component -->
+<h2 class="display-4" >CAROUSEL</h2>
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="3000">
+     <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e5e5e5"></rect><text x="50%" y="50%" fill="#999" dy=".3em">First slide</text></svg>
+	  
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="display-4">First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e5e5e5"></rect><text x="50%" y="50%" fill="#999" dy=".3em">Second slide</text></svg>
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="display-4">Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e5e5e5"></rect><text x="50%" y="50%" fill="#999" dy=".3em">Third slide</text></svg>
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="display-4">Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+Should be created from
+<pre class="bg-light"><code>
+
+::: carousel 
+
+# First slide label
+Some representative placeholder content for the first slide.
+
+# Second slide label
+Some representative placeholder content for the second slide.
+
+# Third slide label
+Some representative placeholder content for the third slide.
+
+:::
+
+</code></pre>
+
+
+
+
+
+<hr class="my-4" id="sectionAccordion">
+<!-- ACCORDIoN Component -->
+<h2 class="display-4" >ACCORDION</h2>
+<div>Click on each drawer title to unfold the level of the accordion.</div>
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<p><br></p>
+<div>Should be created from:</div>
+
+<pre class="bg-light"><code>
+
+::: accordion
+
+# Accordion Item #1
+First toggle content
+
+# Accordion Item #2
+Second toggle content
+
+# Accordion Item #3
+Third toggle content
+
+:::
+
+</code></pre>
+
+
+
+
+<hr class="my-4" id="sectionTabs">
+<!-- TABS Component -->
+<h2 class="display-4" >TABS</h2>
+<div>Click on each "tab" to see the content of the card change</div>
+<!-- début tabs -->
+
+
+                <p><br></p>
+                <div class="card-header">
+                    <ul class="nav nav-pills card-header-pills" style="list-style-type: none;">
+                        <li class="nav-item">
+                            <a class="nav-link  active show" data-bs-toggle="tab" href="#menu1">Linux</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#menu2">Mac</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#menu3">Windows</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="tab-content border-left border-right border-bottom ">
+
+                    <div id="menu1" class="tab-pane fade in active show border p-3">
+                        <h3 class="display-4">Support For linux users</h3>
+                        <p class="lead">Create a shell script</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade border p-3">
+                        <h3 class="display-4">Support for MAc users</h3>
+                        <p class="lead">Do it with Cmd.</p>
+                    </div>
+                    <div id="menu3" class="tab-pane fade border p-3">
+                        <h3 class="display-4">Support for windows users</h3>
+                        <p class="lead">Do it with Ctrl</p>
+                    </div>
+
+                </div>
+
+
+                <!-- fin des tabs -->
+
+<div>Should be created from</div>
+
+<pre class="bg-light"><code>
+
+::: tabs
+
+# Linux
+## Support for Linux users
+Create a shell script
+
+# Mac
+## Support for Mac users
+Do it with Cmd.
+
+# Windows
+## Support for windows users
+Do it with Ctrl
+
+:::
+
+</code></pre>
+
+
+
+
+
+<hr class="my-4" id="sectionButtons">
+<!-- Buttons Component -->
+<h2 class="display-4" >Buttons</h2>
+Links are converted to buttons by default
+
+
+<a class="btn btn-primary" href="https://github.com/pandoc">Pandoc repository</a>
+
+<div>Is created from the code</div>
+<pre class="bg-light"><code>
+[Pandoc repository](https://github.com/pandoc)
+
+</code></pre>
+
+
+<a class="btn btn-success" href="https://github.com/pandoc">Pandoc repository</a>
+
+<div>Is created from the code</div>
+<pre class="bg-light"><code>
+[Pandoc repository](https://github.com/pandoc){.success}
+
+</code></pre>
+
+
+
+<hr class="my-4" id="sectionEmbeds">
+<!-- Embeds Component -->
+<h2 class="display-4" >Embeds</h2>
+YouTube video are turned into embed
+
+
+[Moodle Bootstrap Design](https://www.youtube.com/watch?v=Uz7XbIxHf-4)
+
+
+
+
+<hr class="my-4" id="sectionIcons">
+<!-- Embeds Component -->
+<h2 class="display-4" >Icons</h2>
+
+<i class="bi bi-bootstrap"></i>
+
+<div>Should be created from:</div>
+
+<pre class="bg-light"><code>
+{.bi-bootstrap}
+</code></pre>
+<div>Or even:</div>
+<pre class="bg-light"><code>
+(.bi-bootstrap)
+</code></pre>
+
+<div>But currently requires the full syntax to work:</div>
+
+<pre class="bg-light"><code>
+
+[]{.bi .bi-bootstrap}
+
+</code></pre>
+
+
+
+
+
+</div> <!-- fin .container -->
 </body>
 </html>
