@@ -12,13 +12,22 @@ Hopefully one day included in the https://github.com/pandoc/lua-filters reposito
 
 Here is the list of the components successfully created with this filter
 
-[x] Jumbotrons
-[x] Accordions
-[x] Alerts
-[x] Tabs
-[x] Carousel
-[x] Buttons
-[ ] YouTube Embeds
+* [x] Jumbotrons
+* [x] Accordions
+* [x] Alerts
+* [x] Tabs
+* [x] Carousel
+* [x] Buttons
+* [ ] YouTube Embeds
+
+## Other tools available
+This filter comes with a template to include:
+
+* [ ] Table of content
+
+Another filter can be used to insert social network blocks:
+
+* [ ] Social network links block
 
 
 
@@ -42,7 +51,7 @@ In a perfect solution, only a few sections like :::carousel or :::quiz should be
 
 # Header block (jumbotron)
 
-[Check the demo]( https://fxpar.github.io/Pandoc-Lua-Markdown-Bootstrap/index.html#sectionJumbo)
+[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionJumbo)
 
 * **Expected syntax**: a section called jumbotron
 * **Should be converted into**: a "jumbotron" (bootstrap 4) or a header (Bootstrap 5)
@@ -76,7 +85,7 @@ Becomes
 * Sections called info, warning, danger... 
 * Should be rendered as alerts
 
-[Check the demo]( https://fxpar.github.io/Pandoc-Lua-Markdown-Bootstrap/index.html#sectionAlerts)
+[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionAlerts)
 
 ```
 ::: danger
@@ -101,7 +110,7 @@ A section called card with some paragraph are turned into a card. The paragraphs
 
 The card section can have a nested header section and or a nested footer section with some paragraphs.
 
-[Check the demo]( https://fxpar.github.io/Pandoc-Lua-Markdown-Bootstrap/index.html#sectionCards)
+[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionCards)
 
 
 ```
@@ -148,7 +157,7 @@ A section called carousel with multiple Headers should be converted into a carou
 
 The text can be cards of other component nested.
 
-[Check the demo]( https://fxpar.github.io/Pandoc-Lua-Markdown-Bootstrap/index.html#sectionCarousel)
+[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionCarousel)
 
 
 ```
@@ -198,7 +207,7 @@ Becomes
 ## Accordion
 A section called accordion with multiple Headers and text should be converted into collapsible accordion, each header becoming the toglle link name.
 
-[Check the demo]( https://fxpar.github.io/Pandoc-Lua-Markdown-Bootstrap/index.html#sectionAccordion)
+[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionAccordion)
 
 ```
 ::: accordion accordionId
@@ -272,7 +281,7 @@ Third toggle content
 ## Tabs
 A section called tabs with multiple Headers and text should be converted into tabs, each header becoming a tab header or pill.
 
-[Check the demo]( https://fxpar.github.io/Pandoc-Lua-Markdown-Bootstrap/index.html#sectionTabs)
+[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionTabs)
 
 ```
 ::: tabs
