@@ -23,14 +23,14 @@ Here is the list of the components successfully created with this filter
 * [ ] Dropdowns
 * [ ] YouTube Embeds
 
-## Other tools available
+## Other tools included
 This filter comes with a template to include:
 
-* [ ] Table of content
+* [x] Table of content for the sidebar
 
 Another filter can be used to insert social network blocks:
 
-* [ ] Social network links block
+* [x] [Social-snetwork](https://github.com/fxpar/social-networks-pandoc-lua-filter) filter to create recommandation blocks
 
 
 
