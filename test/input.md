@@ -3,6 +3,7 @@ title: Markdown to Bootstrap
 author: François Parlant
 description: Pandoc Lua filter to convert markdown code into Beautiful Bootstrap components (carousel, accordion, cards, jumbotrons...)
 url: https://fxpar.github.io/Pandoc-Lua-Markdown-Bootstrap/
+iconprefix: fa
 ---
 
 

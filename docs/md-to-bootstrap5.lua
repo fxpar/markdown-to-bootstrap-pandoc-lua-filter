@@ -15,6 +15,7 @@ local tabs_title_list = ''
 local tabs_h1_num =0
 local accordion_h1_num =0
 local carousel_h1_num =0
+local icon_prefix ='bi'
 
 
 
@@ -258,6 +259,11 @@ For everything outside a special filter
 normal_filter = {
   traverse = 'topdown',
   Meta = function(metadata)
+	-- set the icon_prefix from Yaml front Matter if exists
+	if metadata.iconprefix then 
+	print("Icon_prefix: "..pandoc.utils.stringify(metadata.iconprefix))
+		icon_prefix = pandoc.utils.stringify(metadata.iconprefix) 
+	end
   -- Gets the toc and pass it to the template via metadata
 	-- metadata.toc = pandoc.RawInline('html',"<!-- test -->"..mytoc)
 	-- if metadata.direction then direction = metadata.direction end
@@ -445,19 +451,19 @@ function make_social(el, includelink)
 	local mysocial = [[
 	
 	
-	<li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=]]..target_e..[["><i class="bi-facebook p-3"></i> Facebook</a></li>
+	<li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=]]..target_e..[["><i class="]]..icon_prefix..[[ ]]..icon_prefix..[[-facebook p-3"></i> Facebook</a></li>
 	
 	
-	<li><a class="dropdown-item" href="http://twitter.com/intent/tweet?text=]]..content_e..[[&url=]]..target_e..[["><i class="bi-twitter p-3"></i> Twitter</a></li>
+	<li><a class="dropdown-item" href="http://twitter.com/intent/tweet?text=]]..content_e..[[&url=]]..target_e..[["><i class="]]..icon_prefix..[[ ]]..icon_prefix..[[-twitter p-3"></i> Twitter</a></li>
 	
-	<li><a class="dropdown-item" href="http://www.linkedin.com/shareArticle?mini=true&url=]]..target_e..[[&title=]]..content_e..[["><i class="bi-linkedin p-3"></i> LinkedIn</a></li>
+	<li><a class="dropdown-item" href="http://www.linkedin.com/shareArticle?mini=true&url=]]..target_e..[[&title=]]..content_e..[["><i class="]]..icon_prefix..[[ ]]..icon_prefix..[[-linkedin p-3"></i> LinkedIn</a></li>
 	
-	<li><a class="dropdown-item" href="https://wa.me/?text=]]..content_e..[[%20]]..target_e..[["><i class="bi-whatsapp p-3"></i> Whatsapp</a></li>
+	<li><a class="dropdown-item" href="https://wa.me/?text=]]..content_e..[[%20]]..target_e..[["><i class="]]..icon_prefix..[[ ]]..icon_prefix..[[-whatsapp p-3"></i> Whatsapp</a></li>
 	
-	<li><a class="dropdown-item" href="https://telegram.me/share/url?url=]]..target_e..[[&text=]]..content_e..[["><i class="bi-telegram p-3"></i> Telegram</a></li>
+	<li><a class="dropdown-item" href="https://telegram.me/share/url?url=]]..target_e..[[&text=]]..content_e..[["><i class="]]..icon_prefix..[[ ]]..icon_prefix..[[-telegram p-3"></i> Telegram</a></li>
 	
 	<li><a class="dropdown-item" href="mailto:?subject=Super%2
-	0link&body=]]..target_e..[[%0D%0A]]..content_e..[["><i class="bi-envelope p-3"></i> Mail</a></li>
+	0link&body=]]..target_e..[[%0D%0A]]..content_e..[["><i class="]]..icon_prefix..[[ ]]..icon_prefix..[[-envelope p-3"></i> Mail</a></li>
 	
 
 	]]
