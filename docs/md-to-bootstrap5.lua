@@ -285,10 +285,27 @@ normal_filter = {
     return el
   end,
   Link = function(el)
-	local  c ='primary'
-	if el.classes[1] then c = el.classes[1] end
-		el.classes = {'btn','btn-'..c}
-	return el
+  print(el.target) 
+	-- check if the link is a youtube video
+	-- turn it into an embed
+	if string.match(el.target, "(https://www%.youtube%.com/watch%?v=)(.+)" ) then 
+	a,b = string.match(el.target, "(https://www%.youtube%.com/watch%?v=)(.+)" )
+	embed = [[
+		
+		<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/]]..b..[[?rel=0" allowfullscreen></iframe>
+			</div>
+			
+	]]
+	print(b) 
+	return pandoc.RawInline('html',embed)
+	else
+		-- if it is not a youtube video, turn it into a button
+		local  c ='primary'
+		if el.classes[1] then c = el.classes[1] end
+			el.classes = {'btn','btn-'..c}
+		return el
+	end
   end,
   BulletList = function (el)
     local mylist ='<ul >\n'
