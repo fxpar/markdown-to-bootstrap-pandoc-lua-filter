@@ -259,8 +259,14 @@ normal_filter = {
   traverse = 'topdown',
   Meta = function(metadata)
   -- Gets the toc and pass it to the template via metadata
-	metadata.toc = pandoc.RawInline('html',"<!-- test -->"..mytoc)
-	if metadata.direction then direction = metadata.direction end
+	-- metadata.toc = pandoc.RawInline('html',"<!-- test -->"..mytoc)
+	-- if metadata.direction then direction = metadata.direction end
+	if metadata.url then url = metadata.url end
+	local t = pandoc.utils.stringify(metadata.title)
+	local u = pandoc.utils.stringify(metadata.url)
+	local link = pandoc.Link(t,u)
+	local socialblock = make_social(link, false)
+	metadata.socialblock = socialblock
 	return metadata
   end,
   Header = function (el)
@@ -401,11 +407,52 @@ function sanitize_string(source)
 end
 
 function addToToc(el)
-	
 	print("TOC: "..pandoc.utils.stringify(el))
 	mytoc = mytoc ..'<li><a href="#title'..num..'">'.. pandoc.utils.stringify(el).."</a></li>"
 	num = num + 1
 	return true
+end
+
+
+
+
+
+
+
+function make_social(el, includelink)
+	-- local post = make_social(el)
+	local content=pandoc.utils.stringify(el.content)
+	local content_e = urlencode(content)
+	local target = el.target
+	local target_e = urlencode(target)
+	-- local mysocial = '<span>finished</span>'
+	local mysocial = [[
+	
+	
+	<li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=]]..target_e..[["><i class="bi-facebook p-3"></i> Facebook</a>
+	
+	
+	<li><a class="dropdown-item" href="http://twitter.com/intent/tweet?text=]]..content_e..[[&url=]]..target_e..[["><i class="bi-twitter p-3"></i> Twitter</a></li>
+	
+	<li><a class="dropdown-item" href="http://www.linkedin.com/shareArticle?mini=true&url=]]..target_e..[[&title=]]..content_e..[["><i class="bi-linkedin p-3"></i> LinkedIn</a></li>
+	
+	<li><a class="dropdown-item" href="https://wa.me/?text=]]..content_e..[[%20]]..target_e..[["><i class="bi-whatsapp p-3"></i> Whatsapp</a></li>
+	
+	<li><a class="dropdown-item" href="https://telegram.me/share/url?url=]]..target_e..[[&text=]]..content_e..[["><i class="bi-telegram p-3"></i> Telegram</a></li>
+	
+	<li><a class="dropdown-item" href="mailto:?subject=Super%2
+	0link&body=]]..target_e..[[%0D%0A]]..content_e..[["><i class="bi-envelope p-3"></i> Mail</a></li>
+	
+
+	]]
+	
+	local post = pandoc.RawInline('html',mysocial)
+	-- print(el.content)
+	if includelink == false then
+		return post
+	else
+		return {el, post}
+	end
 end
 
 -- we need to modify the doc AT THE END to add the toc
@@ -414,11 +461,17 @@ function makeTOC(doc)
 	return doc
 end
 
-local function urlencode (str)
-   str = string.gsub (str, "([^0-9a-zA-Z !'()*._~-])", -- locale independent
+
+--used to create the social links url with special chars converted to hex
+function urlencode (str)
+   str = string.gsub (str, "([^0-9a-zA-Z!'()*._~-])", -- locale independent
       function (c) return string.format ("%%%02X", string.byte(c)) end)
-   str = string.gsub (str, " ", "+")
+   --str = string.gsub (str, " ", "+")
    return str
 end
+
+
+
+
 
 
