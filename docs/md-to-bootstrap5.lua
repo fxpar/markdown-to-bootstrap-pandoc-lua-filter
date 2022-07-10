@@ -290,11 +290,33 @@ normal_filter = {
 	-- turn it into an embed
 	if string.match(el.target, "(https://www%.youtube%.com/watch%?v=)(.+)" ) then 
 	a,b = string.match(el.target, "(https://www%.youtube%.com/watch%?v=)(.+)" )
+	-- inlude social networks if class is social
+	local socialblock =''
+	if el.classes[1] and el.classes[1] == "social" then 
+		num= num + 1
+		socialblock = [[
+		<div class="btn-group pull-end" role="group">
+			<button id="btnGroupDrop]]..num..[[" type="button" class="btn btn-Light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+			  Share
+			</button>
+			<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop]]..num..[[">]]	
+			..make_social(el, false, 'string')..[[
+			</ul>
+		</div>
+		]]
+		
+		
+		print(socialblock)
+
+		
+	end
 	embed = [[
 		
 		<div class="ratio ratio-16x9">
 				<iframe  src="https://www.youtube.com/embed/]]..b..[[?rel=0" allowfullscreen></iframe>
-			</div>
+		</div>
+		]]..socialblock..[[
+			
 			
 	]]
 	print(b) 
@@ -458,7 +480,7 @@ end
 
 
 
-function make_social(el, includelink)
+function make_social(el, includelink, result)
 	-- local post = make_social(el)
 	local content=pandoc.utils.stringify(el.content)
 	local content_e = urlencode(content)
@@ -487,6 +509,7 @@ function make_social(el, includelink)
 	
 	local post = pandoc.RawInline('html',mysocial)
 	-- print(el.content)
+	if result == 'string' then return mysocial end
 	if includelink == false then
 		return post
 	else
