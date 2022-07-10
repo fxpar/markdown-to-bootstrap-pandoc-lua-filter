@@ -332,12 +332,28 @@ end
 
 function make_jumbotron(div)
 	local content = pandoc.walk_block(div,jumbotron_filter).content
-	local pre = pandoc.RawBlock('html','')
-	local post = pandoc.RawBlock('html','')
+	local pre = pandoc.RawBlock('html','<section class="p-2 p-md-5 rounded-lg mt-3 '..makeClassesString(div.classes)..'">')
+	local post = pandoc.RawBlock('html','</section>')
 	table.insert(content,1,pre)
 	table.insert(content, post)
+	paranum = 0
 	return content
 end
+
+-- create a string with spaces from a classes table
+function makeClassesString(o)
+    --if type(o) == 'table' then
+        local s = ''
+        for k,v in pairs(o) do
+                -- if type(k) ~= 'number' then k = '"'..k..'"' end
+                -- s = s .. '['..k..'] = ' .. dump(v) .. ','
+				s = s .. v.." "
+        end
+		return s
+	--end
+end
+
+
 
 function make_accordion(div)
       -- filter = accordion_filter
@@ -408,7 +424,7 @@ end
 
 function addToToc(el)
 	print("TOC: "..pandoc.utils.stringify(el))
-	mytoc = mytoc ..'<li><a href="#title'..num..'">'.. pandoc.utils.stringify(el).."</a></li>"
+	mytoc = mytoc ..'<li class="mb-1"><a class="link-dark rounded" href="#title'..num..'">'.. pandoc.utils.stringify(el).."</a></li>"
 	num = num + 1
 	return true
 end
@@ -429,7 +445,7 @@ function make_social(el, includelink)
 	local mysocial = [[
 	
 	
-	<li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=]]..target_e..[["><i class="bi-facebook p-3"></i> Facebook</a>
+	<li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=]]..target_e..[["><i class="bi-facebook p-3"></i> Facebook</a></li>
 	
 	
 	<li><a class="dropdown-item" href="http://twitter.com/intent/tweet?text=]]..content_e..[[&url=]]..target_e..[["><i class="bi-twitter p-3"></i> Twitter</a></li>

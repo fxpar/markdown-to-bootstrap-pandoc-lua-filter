@@ -5,13 +5,20 @@
  <meta name="author" content="François Parlant">   
  <title>Markdown to Bootstrap</title>   
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+
 <link href="css/sidebar.css" rel="stylesheet">
 	<style>
 		@media (min-width:1025px) { body { width: 50% !important; margin-left:25vw !important;} }
 	</style>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 
 </head>
 <body class="">
@@ -19,12 +26,7 @@
 <!-- permet de réduire à 50% sur ordinateur -->
 <div class="container ">
 
-<div class="collapse" id="navbarToggleoffcanvas">
-  <div class="bg-primary p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
+
 <nav class="navbar sticky-top navbar-light bg-light">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,14 +35,14 @@
 	
 	<!-- Sharing links dropdown -->
 		<div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-Light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Partage
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop1">
-	
+		<button id="btnGroupDrop1" type="button" class="btn btn-Light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+		  Share
+		</button>
+		<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop1">
 		
+			
 	
-	<li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffxpar.github.io%2FPandoc-Lua-Markdown-Bootstrap%2F"><i class="bi-facebook p-3"></i> Facebook</a>
+	<li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffxpar.github.io%2FPandoc-Lua-Markdown-Bootstrap%2F"><i class="bi-facebook p-3"></i> Facebook</a></li>
 	
 	
 	<li><a class="dropdown-item" href="http://twitter.com/intent/tweet?text=Markdown%20to%20Bootstrap&url=https%3A%2F%2Ffxpar.github.io%2FPandoc-Lua-Markdown-Bootstrap%2F"><i class="bi-twitter p-3"></i> Twitter</a></li>
@@ -56,52 +58,75 @@
 	
 
 	
-	 </ul>
+		 </ul>
   </div>
 	
 	</div>
 		
-  </div>
+
 </nav>
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-dismiss="offcanvas">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel"> <title>Markdown
-to Bootstrap</title>   </h5>
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Markdown to
+Bootstrap   </h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
 
 	<ul class="list-unstyled ps-0">
-	
-	
-            
-	 
-        
+        <li class="border-top my-3"></li>
+				<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#nav-content" aria-expanded="true">Content</button>
+			<div id="nav-content" class="collapse show" >
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"  data-bs-dismiss="offcanvas">
 		 
           <!-- test 2-->
-<li><a href="#title1">JUMBOTRON</a></li><li><a href="#title2">JUMBOTRON COLORED</a></li><li><a href="#title3">ALERTS</a></li><li><a href="#title4">CARD</a></li><li><a href="#title5">ACCORDION</a></li><li><a href="#title6">CAROUSEL</a></li><li><a href="#title7">TABS</a></li><li><a href="#title8">BUTTONS</a></li><li><a href="#title9">EMBEDS</a></li><li><a href="#title10">Icons</a></li><li><a href="#title11">normal chapter</a></li>   
-		 	</ul>
+<li class="mb-1"><a class="link-dark rounded" href="#title1">JUMBOTRON</a></li><li class="mb-1"><a class="link-dark rounded" href="#title2">JUMBOTRON COLORED</a></li><li class="mb-1"><a class="link-dark rounded" href="#title3">ALERTS</a></li><li class="mb-1"><a class="link-dark rounded" href="#title4">CARD</a></li><li class="mb-1"><a class="link-dark rounded" href="#title5">ACCORDION</a></li><li class="mb-1"><a class="link-dark rounded" href="#title6">CAROUSEL</a></li><li class="mb-1"><a class="link-dark rounded" href="#title7">TABS</a></li><li class="mb-1"><a class="link-dark rounded" href="#title8">BUTTONS</a></li><li class="mb-1"><a class="link-dark rounded" href="#title9">EMBEDS</a></li><li class="mb-1"><a class="link-dark rounded" href="#title10">Icons</a></li><li class="mb-1"><a class="link-dark rounded" href="#title11">normal chapter</a></li>   
+		  
+		</ul>
+			</div>
+		</li>
+		<li class="border-top my-3"></li>
+		
+		  		  
+		 <li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#presentation-collapse" aria-expanded="true">Learn More</button>
+			<div id="presentation-collapse" class="collapse show" >
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" data-bs-dismiss="offcanvas">
+					<li><a class="nav-link link-dark rounded" href="https://getbootstrap.com"><i class="bi-bootstrap me-2"></i> Bootstrap</a></li>
+					<li><a class="nav-link link-dark rounded" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"><i class="bi-github me-2"></i>Markdown</a></li>
+					<li><a class="nav-link link-dark rounded" href="https://pandoc.org/"><i class="bi-globe me-2"></i>Pandoc</a></li>
+					<li><a class="nav-link link-dark rounded" href="https://pandoc.org/lua-filters.html"><i class="bi-globe me-2"></i>Lua Filters</a></li>
+					
+
+				</ul>
+			</div>
+		</li>
+		<li class="border-top my-3"></li>
+		<li><a class="nav-link link-dark rounded" href="https://www.linkedin.com/in/francois-parlant/"><i class="bi-linkedin me-2"></i>François Parlant</a></li>
+	</ul>
    
 		  </div>
 		</div>
 		 <h1 class="title">Markdown to Bootstrap</h1>
 		 
-		 
+	   
 		 
       <h1 class="display-2" id="title1">JUMBOTRON</h1>
-
+      <section class="p-2 p-md-5 rounded-lg mt-3 jumbotron ">
       <h1 class="display-4" id="learn-markdown">Learn Markdown</h1>
       <p class="lead">Lead text for this header block</p>
       <hr class="my-4"/>
       <p>Description part for this jumbotron</p>
-
+      </section>
       <h1 class="display-2" id="title2">JUMBOTRON COLORED</h1>
-
+      <section class="p-2 p-md-5 rounded-lg mt-3 jumbotron bg-success text-white ">
       <h1 class="display-4" id="learn-boostrap">Learn Boostrap</h1>
-      <p>Lead text for this header block</p>
+      <p class="lead">Lead text for this header block</p>
+      <hr class="my-4"/>
       <p>Description part for this jumbotron</p>
-
+      </section>
       <h1 class="display-2" id="title3">ALERTS</h1>
       <div class="alert alert-danger">
       <p>You must do this to be safe</p>
@@ -294,6 +319,6 @@ to Bootstrap</title>   </h5>
       <li class="list-group-item">to finish</li>
       </ul>
 	  
-      
+      </div>
    </body>
 </html>
