@@ -61,10 +61,10 @@ In a perfect solution, only a few sections like :::carousel or :::quiz should be
 
  ```
 ::: jumbotron
-# Title of the jumbotron
-Lead text for this header block
+# Markdown to Bootstrap
+Discovert how some simple Mardown can be converted
 
-Description part for this jumbotron
+Here is an implementation with pandoc and Lua filter
 :::
 ``` 
 </td>
@@ -103,6 +103,35 @@ Becomes
   <p>Description part for this jumbotron</p>
 </div>
 ```
+
+
+## Simple Quiz
+
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
+
+ ```
+::: quiz
+# This is the question?
+
+* First proposition
+  * Explanation about first
+* Second proposition
+* Third proposition
+* Fourth proposition
+  * Explanation about fourth
+
+:::
+``` 
+</td>
+<td> 
+
+![jumbotron](/media/quiz.gif) 
+
+</td></tr>
+</table>
 
 
 ## Alerts
@@ -177,6 +206,37 @@ text of the footer
 
 
 ## Carousel
+
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
+
+```
+::: carousel carouselId
+
+# first slide
+Some content for first slide
+
+# Second slide
+Some content for second slide
+
+# Third slide
+Some content for third slide
+
+:::
+
+```
+
+</td>
+<td> 
+
+![jumbotron](/media/carousel.gif) 
+
+</td></tr>
+</table>
+
+
 A section called carousel with multiple Headers should be converted into a carousel, each header becoming a slide.
 
 The text can be cards of other component nested.
@@ -229,6 +289,37 @@ Becomes
 
 
 ## Accordion
+
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
+
+```
+::: accordion accordionId
+
+# first toggle link
+First toggle content
+
+# Second toggle link
+Second toggle content
+
+# Third toggle link
+Third toggle content
+
+:::
+
+```
+
+
+</td>
+<td> 
+
+![jumbotron](/media/accordion.gif) 
+
+</td></tr>
+</table>
+
 A section called accordion with multiple Headers and text should be converted into collapsible accordion, each header becoming the toglle link name.
 
 [Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionAccordion)
@@ -303,6 +394,36 @@ Third toggle content
 
 
 ## Tabs
+
+
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
+
+```
+::: tabs
+
+# first choice
+Some content for first choice
+
+# Second choice
+Some content for second choice
+
+# Third choice
+Some content for third choice
+
+:::
+
+```
+</td>
+<td> 
+
+![jumbotron](/media/tabs.gif) 
+
+</td></tr>
+</table>
+
 A section called tabs with multiple Headers and text should be converted into tabs, each header becoming a tab header or pill.
 
 [Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionTabs)
