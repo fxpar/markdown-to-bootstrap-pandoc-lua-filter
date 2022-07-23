@@ -37,8 +37,8 @@ pandoc sample.md --lua-filter bootstrap.lua -o result.html --template bs5.templa
 
 ## Header block (jumbotron)
 
-<table> 
-<tr><th>Simply type this:</th>  <th>Get that: </th><tr>
+<table style="width:100%"> 
+<tr><th style="width:50%">Simply type this:</th>  <th>Get that: </th><tr>
 
 <tr><td>
 
@@ -64,8 +64,8 @@ Here is an implementation with pandoc
 
 ## Simple Quiz
 
-<table> 
-<tr><th>Simply type the question and proposals:</th>  <th>And get that :</th><tr>
+<table style="width:100%"> 
+<tr><th style="width:50%">>Simply type the question and proposals:</th>  <th>And get that :</th><tr>
 
 <tr><td>
 
@@ -94,8 +94,8 @@ Here is an implementation with pandoc
 
 ## Carousel
 
-<table> 
-<tr><th>Type simply the slide content:</th>  <th>And get that: </th><tr>
+<table style="width:100%"> 
+<tr><th style="width:50%">Type simply the slide content:</th>  <th>And get that: </th><tr>
 
 <tr><td>
 
@@ -129,8 +129,8 @@ Some content for third slide
 
 ## Accordion
 
-<table> 
-<tr><th>Simply type the content of the toggle:</th>  <th>And get that: </th><tr>
+<table style="width:100%"> 
+<tr><th style="width:50%">Simply type the content of the toggle:</th>  <th>And get that: </th><tr>
 
 <tr><td>
 
@@ -165,8 +165,8 @@ Content of the third toggle
 ## Tabs
 
 
-<table> 
-<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+<table style="width:100%"> 
+<tr><th style="width:50%">Type simply this:</th>  <th>Get that </th><tr>
 
 <tr><td>
 
@@ -221,8 +221,8 @@ Becomes
 
 ## Cards
 
-<table> 
-<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+<table style="width:100%"> 
+<tr><th style="width:50%">Type simply the card content:</th>  <th>Get that </th><tr>
 
 <tr><td>
 
@@ -258,7 +258,7 @@ text of the footer
 
 ## Swyping Quiz
 
-<table> 
+<table  style="width:100%"> 
 <tr><th>Type simply this:</th>  <th>And get that: </th><tr>
 
 <tr><td>
