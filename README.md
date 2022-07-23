@@ -414,4 +414,9 @@ A little quiz for you!
 </td></tr>
 </table>
 
+# Creator
+
+François Parlant
+* [Github fxpar](https://github.com/fxpar/)
+* [Linkedin François Parlant](https://linkedin.com/in/francois-parlant/)
 
