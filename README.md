@@ -2,7 +2,7 @@
 
 This pandoc Lua filter converts markdown to Bootstrap components.
 
-
+*Useful for rapidly creating visually attractive Moodle courses*
 
 # USAGE
 
