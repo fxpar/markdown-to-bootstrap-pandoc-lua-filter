@@ -446,6 +446,39 @@ Becomes
 
 ## Cards
 
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
+
+```
+::: card
+
+::: header (optional)
+text of the header
+:::
+
+# a title in the body
+
+Paragraph one of the body
+Paragraph two of the body
+
+:::footer (optional)
+text of the footer
+:::
+
+:::
+
+```
+
+</td>
+<td> 
+
+![jumbotron](/media/card.png) 
+
+</td></tr>
+</table>
+
 _For now, a section needs to be added. Hopefully, a more evident syntax could be used to deduce a card structure directly in the source file without any addition._
 
 A section called card with some paragraph are turned into a card. The paragraphs are the card body.
@@ -531,10 +564,47 @@ Quiz questions can be nested into a carousel. A "next" button should be added if
 Images references are converted to img or card-img if they are inside a card section.
 
 ## Buttons
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
+
+```
+
+You can [Click me](https://github.com/pandoc)
+
+```
+
+</td>
+<td> 
+
+![jumbotron](/media/button.png) 
+
+</td></tr>
+</table>
 
 A link becomes by default a button
 
 ## Media link
+
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
+
+```
+
+[Moodle Bootstrap Design](https://www.youtube.com/watch?v=Uz7XbIxHf-4)
+
+```
+
+</td>
+<td> 
+
+![jumbotron](/media/youtube.png) 
+
+</td></tr>
+</table>
 
 A link to a media (YouTube, Vimeo...) becomes an iframe with embed
 
