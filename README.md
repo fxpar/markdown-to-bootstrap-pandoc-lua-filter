@@ -16,6 +16,7 @@ Or with a template to add the bootstrap headers and navbar with Table of content
 pandoc sample.md --lua-filter bootstrap.lua -o result.html --template bs5.template.html -f markdown+inline_code_attributes
 ```
 
+# COMPONENTS
 
 
 ## Header block (jumbotron)
