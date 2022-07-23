@@ -258,53 +258,6 @@ text of the footer
 
 
 
-## Swyping Quiz
-
-<table> 
-<tr><th>Type simply this:</th>  <th>And get that: </th><tr>
-
-<tr><td>
-
-```
-::: carousel
-
-::: quiz
-
-# Check your level
-
-A little quiz for you!
-
-# Question 1
-
-* proposition 1
-  * feedback for proposition 1
-* proposition 2
-* proposition c
-* proposition d
-
-  
-# Question 2
-
-* Prop A
-* Prop B
-* Prop C
-  * feedback prop C
-* prop D
-:::
-
-:::
-```
-
-</td>
-<td> 
-
-![jumbotron](/media/carouselquiz.gif) 
-
-</td></tr>
-</table>
-
-
-
 
 
 
@@ -413,3 +366,52 @@ Here is what is already done and which components are planned:
 * [ ] ButtonGroups
 * [ ] Dropdowns
 * [x] YouTube Embeds
+
+
+
+## Swyping Quiz
+
+<table> 
+<tr><th>Type simply this:</th>  <th>And get that: </th><tr>
+
+<tr><td>
+
+```
+::: carousel
+
+::: quiz
+
+# Check your level
+
+A little quiz for you!
+
+# Question 1
+
+* proposition 1
+  * feedback for proposition 1
+* proposition 2
+* proposition c
+* proposition d
+
+  
+# Question 2
+
+* Prop A
+* Prop B
+* Prop C
+  * feedback prop C
+* prop D
+:::
+
+:::
+```
+
+</td>
+<td> 
+
+![jumbotron](/media/carouselquiz.gif) 
+
+</td></tr>
+</table>
+
+
