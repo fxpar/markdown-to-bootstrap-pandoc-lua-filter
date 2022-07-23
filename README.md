@@ -1,23 +1,6 @@
 # Pandoc Lua filter : Markdown To Bootstrap
 
-**BETA VERSION**
-
-A Lua filter to convert markdown to Bootstrap components like cards, carousel, accordion, tabs, jumbotrons, alerts, buttons, embeds... 
-
-**Main target**: helping course creation from teachers to Learning Management Software (Moodle's main themes, like "Boost" are Bootstrap based) or web/mobile page.
-
-Hopefully one day included in the https://github.com/pandoc/lua-filters repository.
-
-
-
-## Other tools included
-This filter comes with a template to include:
-
-* [x] Table of content for the sidebar
-
-Another filter can be used to insert social network blocks:
-
-* [x] [Social-snetwork](https://github.com/fxpar/social-networks-pandoc-lua-filter) filter to create recommandation blocks
+This pandoc Lua filter converts markdown to Bootstrap components.
 
 
 
@@ -37,8 +20,8 @@ pandoc sample.md --lua-filter bootstrap.lua -o result.html --template bs5.templa
 
 ## Header block (jumbotron)
 
-<table style="width:100%"> 
-<tr><th style="width:50%">Simply type this:</th>  <th>Get that: </th><tr>
+<table > 
+<tr><th >Simply type this:</th>  <th>Get that: </th><tr>
 
 <tr><td>
 
@@ -64,8 +47,8 @@ Here is an implementation with pandoc
 
 ## Simple Quiz
 
-<table style="width:100%"> 
-<tr><th style="width:50%">>Simply type the question and proposals:</th>  <th>And get that :</th><tr>
+<table > 
+<tr><th>Simply type the question and proposals:</th>  <th>And get that :</th><tr>
 
 <tr><td>
 
@@ -94,8 +77,8 @@ Here is an implementation with pandoc
 
 ## Carousel
 
-<table style="width:100%"> 
-<tr><th style="width:50%">Type simply the slide content:</th>  <th>And get that: </th><tr>
+<table > 
+<tr><th >Type simply the slide content:</th>  <th>And get that: </th><tr>
 
 <tr><td>
 
@@ -129,8 +112,8 @@ Some content for third slide
 
 ## Accordion
 
-<table style="width:100%"> 
-<tr><th style="width:50%">Simply type the content of the toggle:</th>  <th>And get that: </th><tr>
+<table > 
+<tr><th>Simply type the content of the toggle:</th>  <th>And get that: </th><tr>
 
 <tr><td>
 
@@ -165,8 +148,8 @@ Content of the third toggle
 ## Tabs
 
 
-<table style="width:100%"> 
-<tr><th style="width:50%">Type simply this:</th>  <th>Get that </th><tr>
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
 
 <tr><td>
 
@@ -221,8 +204,8 @@ Becomes
 
 ## Cards
 
-<table style="width:100%"> 
-<tr><th style="width:50%">Type simply the card content:</th>  <th>Get that </th><tr>
+<table> 
+<tr><th>Type simply the card content:</th>  <th>Get that </th><tr>
 
 <tr><td>
 
@@ -258,7 +241,7 @@ text of the footer
 
 ## Swyping Quiz
 
-<table  style="width:100%"> 
+<table> 
 <tr><th>Type simply this:</th>  <th>And get that: </th><tr>
 
 <tr><td>
@@ -350,6 +333,16 @@ You can [Click me](https://github.com/pandoc)
 
 </td></tr>
 </table>
+
+
+# Other tools included
+This filter comes with a template to include:
+
+* [x] Table of content for the sidebar
+
+Another filter can be used to insert social network blocks:
+
+* [x] [Social-snetwork](https://github.com/fxpar/social-networks-pandoc-lua-filter) filter to create recommandation blocks
 
 
 
