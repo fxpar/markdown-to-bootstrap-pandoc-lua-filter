@@ -68,7 +68,7 @@ Description part for this jumbotron
 :::
 ``` 
 </td>
-<td> [jumbotron](/media/jumbotron.png?raw=true)</td></tr>
+<td> [jumbotron](media/jumbotron.png?raw=true)</td></tr>
 </table>
 
 [Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionJumbo)
