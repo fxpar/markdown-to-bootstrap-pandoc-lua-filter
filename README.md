@@ -136,76 +136,6 @@ Becomes
 </table>
 
 
-## Alerts
-* Sections called info, warning, danger... 
-* Should be rendered as alerts
-
-[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionAlerts)
-
-```
-::: danger
-You must do this to be safe
-:::
-```
-
-Becomes
-
-```
-<div class="alert alert-danger" role="alert">
-  You must do this to be safe
-</div>
-```
-
-
-## Cards
-
-_For now, a section needs to be added. Hopefully, a more evident syntax could be used to deduce a card structure directly in the source file without any addition._
-
-A section called card with some paragraph are turned into a card. The paragraphs are the card body.
-
-The card section can have a nested header section and or a nested footer section with some paragraphs.
-
-[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionCards)
-
-
-```
-::: card
-
-::: header (optional)
-text of the header
-:::
-
-# a title in the body
-
-Paragraph one of the body
-Paragraph two of the body
-
-:::footer (optional)
-text of the footer
-:::
-
-:::
-
-```
-
-
-```
-<div class="card text-center">
-  <div class="card-header">
-    text of the header
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">a title in the body</h5>
-    <p class="card-text">Paragraph one of the body</p>
-    <p class="card-text">Paragraph two of the body</p>
-  </div>
-  <div class="card-footer text-muted">
-    text of the footer
-  </div>
-</div>
-```
-
-
 
 ## Carousel
 
@@ -301,13 +231,13 @@ Becomes
 ::: accordion accordionId
 
 # first toggle link
-First toggle content
+Content of the first toggle
 
 # Second toggle link
-Second toggle content
+Content of the second toggle
 
 # Third toggle link
-Third toggle content
+Content of the third toggle
 
 :::
 
@@ -487,6 +417,80 @@ Becomes
                 </div>
 ```
 
+
+
+
+
+
+
+## Alerts
+* Sections called info, warning, danger... 
+* Should be rendered as alerts
+
+[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionAlerts)
+
+```
+::: danger
+You must do this to be safe
+:::
+```
+
+Becomes
+
+```
+<div class="alert alert-danger" role="alert">
+  You must do this to be safe
+</div>
+```
+
+
+## Cards
+
+_For now, a section needs to be added. Hopefully, a more evident syntax could be used to deduce a card structure directly in the source file without any addition._
+
+A section called card with some paragraph are turned into a card. The paragraphs are the card body.
+
+The card section can have a nested header section and or a nested footer section with some paragraphs.
+
+[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionCards)
+
+
+```
+::: card
+
+::: header (optional)
+text of the header
+:::
+
+# a title in the body
+
+Paragraph one of the body
+Paragraph two of the body
+
+:::footer (optional)
+text of the footer
+:::
+
+:::
+
+```
+
+
+```
+<div class="card text-center">
+  <div class="card-header">
+    text of the header
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">a title in the body</h5>
+    <p class="card-text">Paragraph one of the body</p>
+    <p class="card-text">Paragraph two of the body</p>
+  </div>
+  <div class="card-footer text-muted">
+    text of the footer
+  </div>
+</div>
+```
 
 
 
