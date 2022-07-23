@@ -182,24 +182,42 @@ Some content for third choice
 
 
 ## Alerts
-* Sections called info, warning, danger... 
-* Should be rendered as alerts
 
-[Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionAlerts)
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
 
 ```
-::: danger
-You must do this to be safe
+::: info
+This is an info alert
 :::
 ```
 
-Becomes
+</td>
+<td> 
+
+![jumbotron](/media/alertinfo.png) 
+
+</td></tr>
+<tr><td>
 
 ```
-<div class="alert alert-danger" role="alert">
-  You must do this to be safe
-</div>
+::: info
+This is an danger alert
+:::
 ```
+
+</td>
+<td> 
+
+![jumbotron](/media/alertdanger.png) 
+
+</td></tr>
+
+</table>
+
+
 
 
 ## Cards
@@ -287,7 +305,6 @@ A little quiz for you!
 
 
 
-## Images
 
 
 
@@ -309,6 +326,21 @@ You can [Click me](https://github.com/pandoc)
 ![jumbotron](/media/button.png) 
 
 </td></tr>
+<tr><td>
+
+```
+
+You can [Click me](https://github.com/pandoc){.success}
+
+```
+
+</td>
+<td> 
+
+![jumbotron](/media/buttonsuccess.png) 
+
+</td></tr>
+
 </table>
 
 
@@ -334,6 +366,26 @@ You can [Click me](https://github.com/pandoc)
 </td></tr>
 </table>
 
+
+
+## Icons
+
+<table> 
+<tr><th>Simply type this:</th>  <th>And get that: </th><tr>
+
+<tr><td>
+
+```
+[](.bi-bootstrap)
+```
+
+</td>
+<td> 
+
+![jumbotron](/media/icon.png) 
+
+</td></tr>
+</table>
 
 # Other tools included
 This filter comes with a template to include:
