@@ -54,16 +54,22 @@ In a perfect solution, only a few sections like :::carousel or :::quiz should be
 
 # Header block (jumbotron)
 
-| Type simply this: | Get that |
-|---|---|---|
-| ```
+<table> 
+<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+
+<tr><td>
+
+ ```
 ::: jumbotron
 # Title of the jumbotron
 Lead text for this header block
 
 Description part for this jumbotron
 :::
-``` | [jumbotron](./media/jumbotron.png)|
+``` 
+</td>
+<td> [jumbotron](./media/jumbotron.png)</td></tr>
+</table>
 
 [Check the demo]( https://fxpar.github.io/markdown-to-bootstrap-pandoc-lua-filter/index.html#sectionJumbo)
 
