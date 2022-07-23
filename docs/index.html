@@ -162,126 +162,6 @@
 	</div>
 
 </div>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-
-<hr class="my-4" id="sectionQuiz">
-<h2 class="display-4" >Quiz</h2>
-<!-- Quiz COMPONENT -->
-<div>Click <a class="btn btn-outline-success" role="button" data-bs-target="#carouselTest1" data-bs-slide="next" >start</a> to get to first question.  Click the correct answer to see the feedback : "Carousel" in Q1, "Python" in Q2.
-</div>
-<br/>
-<div id="carouselTest1" class="carousel slide" data-bs-interval="false" data-bs-ride="false">
-    <div class="carousel-inner">
-
-
-        <div class="carousel-item active">
-
-
-
-            <div class="card text-center">
-
-                <div class="card-body">
-                    <h5 class="card-title display-4">2 most frequent questions</h5>
-                    <p class="card-text">Earn points for the exam.</p>
-                    <a class="btn btn-success text-white" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Start!</a>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="carousel-item">
-
-
-            <div class="card  mt-2" style="">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="">Which bootstrap component can be swyped?</div>
-
-                </div>
-
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item collapsed" data-bs-toggle="collapse" data-bs-target="#q1a1" aria-expanded="false">Carousel
-                        <div id="q1a1" class="collapsed collapse" style="">
-                            <div class="alert alert-success p-3">Perfect! yes the carousel has controls to swype on mobile and click on desktop.
-                                
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="list-group-item ">Accordion</li>
-                    <li class="list-group-item ">Alert</li>
-                    <li class="list-group-item ">Carddeck</li>
-                </ul>
-                <div class="card-footer">
-                    <button class="btn btn-xs btn-primary text-right pull-right" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Next</button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="carousel-item">
-
-
-            <div class="card  mt-2" style="">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="">Which language takes <b>indentation</b> very seriously?</div>
-
-                </div>
-
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Javascript<br>
-                    </li>
-
-                    <li class="list-group-item">php<br></li>
-                    <li class="list-group-item collapsed" data-bs-toggle="collapse" data-bs-target="#q1a2" aria-expanded="false">Python<br>
-                        <div id="q1a2" class="collapsed collapse" style="">
-                            <div class="alert alert-success" >yes in Python indenting code is very important
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="card-footer">
-                    <button class="btn btn-primary" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Suivant</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-It should simply be created from this code
-
-<pre class="bg-light"><code>
-::: quiz carousel
-
-# 2 most frequent questions
-Earn points for the exam
-
-
-# Which bootstrap component can be swyped?
-* Carousel
-  * Perfect! yes the carousel has controls to swype on mobile and click on desktop.
-* Accordion
-* Alert
-* Carddeck
-
-# Which language takes indentation very seriously?
-* javascript
-* Php
-* Python
-  * yes in Python indenting code is very important
-
-
-:::
-</code></pre>
-
-
 
 
 
@@ -584,6 +464,135 @@ Do it with Ctrl
 :::
 
 </code></pre>
+
+
+
+
+<p><br></p>
+<p><br></p>
+<p><br></p>
+
+<hr class="my-4" id="sectionSwypingQuiz">
+<h2 class="display-4" >Swyping quiz</h2>
+<!-- Quiz COMPONENT -->
+
+<br/>
+<div id="carouselTest1" class="carousel slide" data-bs-interval="false" data-bs-ride="false" style="width:20rem">
+    <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+
+
+
+            <div class="card text-center">
+
+                <div class="card-body">
+                    <h5 class="card-title display-4">Level check</h5>
+                    <p class="card-text">A little quiz for you!</p>
+                    <a class="btn btn-success text-white" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Start!</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="carousel-item">
+
+
+            <div class="card  mt-2" style="">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="lead">Question 1 ?</div>
+
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item collapsed" data-bs-toggle="collapse" data-bs-target="#q2q1a1" aria-expanded="false">Proposition 1
+                        <div id="q2q1a1" class="collapsed collapse" style="">
+                            <div class="alert alert-success p-3">Feedback for proposition 1
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item ">Proposition 2</li>
+                    <li class="list-group-item ">Proposition 3</li>
+                    <li class="list-group-item ">Proposition 4</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-xs btn-primary text-right pull-right" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Next</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="carousel-item">
+
+
+            <div class="card  mt-2" style="">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="lead">Question 2?</div>
+
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Prop A<br>
+                    </li>
+
+                    <li class="list-group-item">Prop B<br></li>
+                    <li class="list-group-item collapsed" data-bs-toggle="collapse" data-bs-target="#q1a2" aria-expanded="false">Prop C<br>
+                        <div id="q1a2" class="collapsed collapse" style="">
+                            <div class="alert alert-success" >Feedback for prop C
+                            </div>
+                        </div>
+                    </li>
+					<li class="list-group-item">Prop D<br></li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-primary" data-bs-target="#carouselTest1" data-bs-slide="next" role="button">Suivant</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+It should simply be created from this code
+
+<pre class="bg-light"><code>
+::: quiz carousel
+
+# 2 most frequent questions
+Earn points for the exam
+
+
+# Which bootstrap component can be swyped?
+* Carousel
+  * Perfect! yes the carousel has controls to swype on mobile and click on desktop.
+* Accordion
+* Alert
+* Carddeck
+
+# Which language takes indentation very seriously?
+* javascript
+* Php
+* Python
+  * yes in Python indenting code is very important
+
+
+:::
+</code></pre>
+
+
 
 
 

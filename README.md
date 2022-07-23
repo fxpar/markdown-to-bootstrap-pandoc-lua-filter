@@ -528,7 +528,52 @@ text of the footer
 
 
 
-## Quiz
+## Swyping Quiz
+
+<table> 
+<tr><th>Type simply this:</th>  <th>And get that: </th><tr>
+
+<tr><td>
+
+```
+::: carousel
+
+::: quiz
+
+# Check your level
+
+A little quiz for you!
+
+# Question 1
+
+* proposition 1
+  * feedback for proposition 1
+* proposition 2
+* proposition c
+* proposition d
+
+  
+# Question 2
+
+* Prop A
+* Prop B
+* Prop C
+  * feedback prop C
+* prop D
+:::
+
+:::
+```
+
+</td>
+<td> 
+
+![jumbotron](/media/carouselquiz.gif) 
+
+</td></tr>
+</table>
+
+
 A heading with a list inside a Quiz section should be converted into a quiz
 
 Correct solutions DO have a feedback.
@@ -538,24 +583,32 @@ Correct solutions DO have a feedback.
 Quiz questions can be nested into a carousel. A "next" button should be added if it is the case.
 
 ```
+::: carousel
+
 ::: quiz
+
+# Check your level
+
+A little quiz for you!
 
 # Question 1
 
-* proposition a
-* proposition b
-  * feedback for proposition b
+* proposition 1
+  * feedback for proposition 1
+* proposition 2
 * proposition c
 * proposition d
-  * feedback for proposition d
+
   
 # Question 2
 
-* prop a
-  * feedback prop a
-* prop b
-* prop c
-* prop d
+* Prop A
+* Prop B
+* Prop C
+  * feedback prop C
+* prop D
+:::
+
 :::
 ```
 
@@ -594,7 +647,7 @@ A link becomes by default a button
 
 ```
 
-[Moodle Bootstrap Design](https://www.youtube.com/watch?v=Uz7XbIxHf-4)
+[Bootstrap design](https://www.youtube.com/watch?v=Uz7XbIxHf-4)
 
 ```
 
