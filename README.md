@@ -55,16 +55,18 @@ In a perfect solution, only a few sections like :::carousel or :::quiz should be
 # Header block (jumbotron)
 
 <table> 
-<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+<tr><th>Simply type this:</th>  <th>Get that: </th><tr>
 
 <tr><td>
 
  ```
 ::: jumbotron
 # Markdown to Bootstrap
-Discovert how some simple Mardown can be converted
+Discovert how some simple Mardown can 
+ be converted
 
-Here is an implementation with pandoc and Lua filter
+Here is an implementation with pandoc 
+ and Lua filter
 :::
 ``` 
 </td>
@@ -108,7 +110,7 @@ Becomes
 ## Simple Quiz
 
 <table> 
-<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+<tr><th>Simply type the question and proposals:</th>  <th>And get that :</th><tr>
 
 <tr><td>
 
@@ -208,7 +210,7 @@ text of the footer
 ## Carousel
 
 <table> 
-<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+<tr><th>Type simply the slide content:</th>  <th>And get that: </th><tr>
 
 <tr><td>
 
@@ -291,7 +293,7 @@ Becomes
 ## Accordion
 
 <table> 
-<tr><th>Type simply this:</th>  <th>Get that </th><tr>
+<tr><th>Simply type the content of the toggle:</th>  <th>And get that: </th><tr>
 
 <tr><td>
 
@@ -404,13 +406,13 @@ Third toggle content
 ```
 ::: tabs
 
-# first choice
+# Choice 1
 Some content for first choice
 
-# Second choice
+# Choice 2
 Some content for second choice
 
-# Third choice
+# Choice 3
 Some content for third choice
 
 :::
