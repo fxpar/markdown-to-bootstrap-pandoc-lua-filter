@@ -229,27 +229,6 @@ tabs_filter = {
 }
 
 
--- quiz
-quiz_filter = {
-  traverse = 'topdown',
-  Header = function(el)
-    local mytitle = pandoc.utils.stringify(el)
-    el.classes = {'specialHeader'}
-	print(make_id(pandoc.Inlines (pandoc.utils.stringify(el))))
-    return el
-  end,
-  BulletList = function (el)
-    local mylist ='<ul >\n'
-    for i, item in ipairs(el.content) do
-      local first = item[1]
-      if first  then
-        mylist =  mylist .. '<li class="special-item">' .. pandoc.utils.stringify(first) ..  '</li>\n'
-      end
-    end
-    mylist =  mylist .. '</ul>\n'
-    return pandoc.RawInline('html', mylist)
-  end
-}
 
 
 --[[
@@ -350,6 +329,7 @@ This where we assign filters.
 	  return make_carousel(div)
 	elseif div.classes[1] == 'quiz' then
       filter = quiz_filter
+	  -- return make_carousel(div)
 	elseif div.classes[1] == 'card' then
       filter = card_filter
 	elseif div.classes[1] == 'jumbotron' then
@@ -385,6 +365,64 @@ function make_jumbotron(div)
 	return content
 end
 
+
+function make_quiz(div)
+	
+end
+
+
+-- quiz
+
+
+quiz_filter = {
+  traverse = 'topdown',
+  Header = function(el)
+    local mytitle = pandoc.utils.stringify(el)
+    el.classes = {'specialHeader'}
+	print(make_id(pandoc.Inlines (pandoc.utils.stringify(el))))
+    return el
+  end,
+  BulletList = function (el)
+    local mylist ='<ul class="list-group list-group-flush">\n'
+    for i, item in ipairs(el.content) do
+      local first = item[1]
+      if first  then
+        mylist =  mylist .. '<li class="special-item">' .. pandoc.utils.stringify(first) ..  '</li>\n'
+      end
+    end
+    mylist =  mylist .. '</ul>\n'
+    return pandoc.RawInline('html', mylist)
+  end
+}
+
+
+quiz_filter0 = {
+  traverse = 'topdown',
+  Header = function(el)
+    local mytitle = pandoc.utils.stringify(el)
+    el.classes = {'specialHeader'}
+	print(make_id(pandoc.Inlines (pandoc.utils.stringify(el))))
+    return el
+  end,
+  BulletList = function (el)
+    local mylist ='<ul class="list-group list-group-flush">\n'
+    for i, item in ipairs(el.content) do
+      local first = item[1]
+      if first  then
+        mylist =  mylist .. '<li class="special-item">' .. pandoc.utils.stringify(first) ..  '</li>\n'
+      end
+    end
+    mylist =  mylist .. '</ul>\n'
+    return pandoc.RawInline('html', mylist)
+  end
+}
+
+
+
+
+
+
+
 -- create a string with spaces from a classes table
 function makeClassesString(o)
     --if type(o) == 'table' then
@@ -412,6 +450,10 @@ function make_accordion(div)
 	  accordion_h1_num = 0
 	  return content
 end
+
+
+
+
 
 function make_carousel(div)
 	section_id = section_num + 1

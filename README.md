@@ -204,7 +204,7 @@ This is an info alert
 <tr><td>
 
 ```
-::: info
+::: danger
 This is an danger alert
 :::
 ```
